@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+    <title>SIMAPAN</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <div class="login-container">
+        <button id="loginBtn" class="login-button">Login</button>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <h2>Selamat Datang</h2>
+                <div class="tab-container">
+                    <button class="tab-button active" onclick="openTab('signin')">Sign In</button>
+                    <button class="tab-button" onclick="openTab('signup')">Sign Up</button>
+                </div>
+            </div>
+            
+            <div id="signin" class="tab-content active">
+                <form class="login-form" action="https://fakestoreapi.com/products" method="post">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    <button type="button" class="google-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                        Sign in with Google
+                    </button>
+                </form>
+            </div>
+            
+            <div id="signup" class="tab-content">
+                <form class="login-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Sign Up</button>
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+                    <button type="button" class="google-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+                        Sign up with Google
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">SISTEM MANAJEMEN PERTANIAN</h1>
+            <p class="hero-subtitle">Kabupaten Lampung Barat</p>
+            
+            <div class="nav-box">
+                <ul>
+                    <li><a href="#plants">Plants</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#tips">Gardening Tips</a></li>
+                    <li><a href="#seasons">Seasonal Guide</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <h2 class="section-title">MENU</h2>
+            
+            <div class="garden-topics">
+                <div class="topic-card" id="plants">
+                    <h3>Beautiful Plants for Your Garden</h3>
+                    <p>Explore our collection of stunning plants that will transform your garden into a colorful paradise. From flowering perennials to exotic succulents, we have everything you need.</p>
+                    <a href="#" class="read-more">Explore Plants</a>
+                </div>
+                
+                <div class="topic-card" id="tools">
+                    <h3>Essential Gardening Tools</h3>
+                    <p>Discover the right tools that make gardening easier and more enjoyable. Our expert-recommended selection will help you maintain your garden with ease.</p>
+                    <a href="#" class="read-more">View Tools</a>
+                </div>
+                
+                <div class="topic-card" id="tips">
+                    <h3>Expert Gardening Tips</h3>
+                    <p>Learn professional techniques and tips to help your garden thrive in any season. Our gardening experts share their secrets for a lush, vibrant garden.</p>
+                    <a href="#" class="read-more">Read Tips</a>
+                </div>
+                
+                <div class="topic-card" id="seasons">
+                    <h3>Seasonal Gardening Guide</h3>
+                    <p>Know what to plant and when with our comprehensive seasonal gardening guide. Plan ahead for year-round beauty in your outdoor space.</p>
+                    <a href="#" class="read-more">Seasonal Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 CyberBullying</p>
+    </footer>
+    <script src="home.js"></script>
+</body>
+</html>
