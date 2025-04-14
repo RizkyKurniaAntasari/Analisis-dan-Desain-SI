@@ -79,6 +79,26 @@
             <img src="\img\cabai.jpeg" alt="cabai.jpeg" class="rounded-md w-full h-full object-cover">
         </div>
     </section>
+
+        <!-- Artikel + Statistik -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-6 bg-green-200">
+        <!-- Artikel -->
+        <div class="bg-green-800 text-white p-6 rounded-md">
+            <h3 class="font-bold text-lg mb-2">PERAN ARTIFICIAL INTELLIGENCE (AI)</h3>
+            <p class="text-sm">DALAM MEMPREDIKSI HAMA DAN PENYAKIT PADA TANAMAN SAYURAN</p>
+            <p class="mt-4 text-xs">23 Maret 2025</p>
+        </div>
+
+        <!-- Statistik -->
+        <div class="bg-white rounded-md p-6">
+            <h3 class="text-green-800 font-bold mb-2">Statistik Harga Kopi Lampung</h3>
+            <p class="text-xs text-gray-500 mb-4">Last Update: 30-03-2025</p>
+            <div class="w-full h-32 bg-green-100 rounded-md flex items-center justify-center">
+                <!-- Chart bisa disisipkan nanti pakai JS -->
+                <span class="text-green-700 text-2xl font-bold">64K</span>
+            </div>
+        </div>
+    </section>
     
 </body>
 </html>
