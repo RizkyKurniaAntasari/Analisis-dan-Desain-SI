@@ -57,5 +57,28 @@
         </ul>
     </nav>
 
+        <!-- Hero Section -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-white">
+        <!-- Gambar kiri -->
+        <div class="md:col-span-1">
+            <img src="\img\left.jpg" alt="Tanaman" class="rounded-md w-full h-full object-cover">
+        </div>
+
+        <!-- Tengah -->
+        <div class="md:col-span-1 relative">
+            <img src="\img\tengah.jpg" alt="" class="rounded-md w-full h-64 object-cover">
+            <div class="absolute bottom-0 bg-black bg-opacity-60 text-white p-4 w-full">
+                <h2 class="text-lg font-semibold">Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi
+                    Berkualitas Tinggi</h2>
+                <p class="text-sm mt-1">23 Maret 2025</p>
+            </div>
+        </div>
+
+        <!-- Gambar kanan -->
+        <div class="md:col-span-1">
+            <img src="\img\cabai.jpeg" alt="cabai.jpeg" class="rounded-md w-full h-full object-cover">
+        </div>
+    </section>
+    
 </body>
 </html>
