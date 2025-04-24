@@ -6,150 +6,113 @@
     <meta charset="UTF-8">
     <title>Pengajuan Subsidi</title>
     <script src="js/script.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-[#DBE7C9] font-poppins">
     @include('components.navbar')
-    <div class="bg-[#DBE7C9] p-10 rounded min-h-screen relative">
-        <div class="absolute top-0 right-0 mt-4 mr-4">
-            <div class="relative">
-                <button id="notificationBtn" class="text-green-600 hover:text-green-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                </button>
-                <div id="notificationDropdown" class="hidden absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg z-50">
-                    <div class="p-4 border-b">
-                        <h3 class="font-bold text-gray-800">Notifikasi</h3>
-                    </div>
-                    <div class="max-h-64 overflow-y-auto">
-                        <div class="p-3 border-b hover:bg-gray-50">
-                            <p class="text-sm font-medium text-gray-800">Pengajuan Subsidi Pupuk</p>
-                            <p class="text-xs text-gray-600">Pengajuan Anda telah disetujui. Silahkan ambil di kantor desa.</p>
-                            <p class="text-xs text-gray-500 mt-1">2 jam yang lalu</p>
-                        </div>
-                        <div class="p-3 border-b hover:bg-gray-50">
-                            <p class="text-sm font-medium text-gray-800">Pengajuan Subsidi Benih</p>
-                            <p class="text-xs text-gray-600">Pengajuan Anda sedang dalam proses verifikasi.</p>
-                            <p class="text-xs text-gray-500 mt-1">1 hari yang lalu</p>
-                        </div>
-                        <div class="p-3 hover:bg-gray-50">
-                            <p class="text-sm font-medium text-gray-800">Pengajuan Subsidi Pestisida</p>
-                            <p class="text-xs text-gray-600">Pengajuan Anda telah ditolak. Silahkan hubungi kantor desa.</p>
-                            <p class="text-xs text-gray-500 mt-1">3 hari yang lalu</p>
-                        </div>
-                    </div>
-                    <div class="p-2 text-center border-t">
-                        <a href="#" class="text-sm text-green-600 hover:text-green-800">Lihat Semua Notifikasi</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h1 class="text-center text-2xl font-bold text-green-900 mb-8">PENGAJUAN SUBSIDI BANTUAN</h1>
-        
-        <form action="" method="POST" class="max-w-4xl mx-auto space-y-4" enctype="multipart/form-data">
+    <div class=" bg-[#DBE7C9] p-10 rounded min-h-screen items-center justify-center">
+        <h1 class="text-center text-2xl font-bold text-green-900 mb-8">PENGAJUAN SUBSIDI</h1>
+        <form action="{{ route('pengajuan_subsidi.store') }}" method="POST" class="space-y-6" autocomplete="off">
             @csrf
-            
-            <div class="grid grid-cols-5 gap-4 items-center">
-                <label for="nama" class="font-semibold text-green-900 col-span-1">Nama</label>
-                <div class="col-span-4">
-                    <input type="text" id="nama" name="nama" placeholder="-" 
-                        class="w-full p-3 rounded bg-[#8DA47E]/70 text-white placeholder-white focus:outline-none">
-                </div>
+
+            <!-- NAMA -->
+            <div class="grid grid-cols-4 gap-4 items-center">
+                <label for="nama" class="font-bold text-green-900 col-span-1">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Nama Anda" required
+                    class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
+                    value="{{ old('nama') }}">
+                @error('nama')
+                    <p class="text-red-500 text-sm col-span-4">{{ $message }}</p>
+                @enderror
             </div>
-            
-            <div class="grid grid-cols-5 gap-4 items-center">
-                <label for="alamat" class="font-semibold text-green-900 col-span-1">Alamat</label>
-                <div class="col-span-4">
-                    <input type="text" id="alamat" name="alamat" placeholder="-" 
-                        class="w-full p-3 rounded bg-[#8DA47E]/70 text-white placeholder-white focus:outline-none">
-                </div>
+
+            <!-- ALAMAT -->
+            <div class="grid grid-cols-4 gap-4 items-center">
+                <label for="alamat" class="font-bold text-green-900 col-span-1">Alamat</label>
+                <input type="text" id="alamat" name="alamat" placeholder="Alamat Anda" required
+                    class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
+                    value="{{ old('alamat') }}">
+                @error('alamat')
+                    <p class="text-red-500 text-sm col-span-4">{{ $message }}</p>
+                @enderror
             </div>
-            
-            <div class="grid grid-cols-5 gap-4 items-center">
-                <label for="nik" class="font-semibold text-green-900 col-span-1">NIK</label>
-                <div class="col-span-4">
-                    <input type="text" id="nik" name="nik" placeholder="-" 
-                        class="w-full p-3 rounded bg-[#8DA47E]/70 text-white placeholder-white focus:outline-none">
-                </div>
+
+            <!-- NIK -->
+            <div class="grid grid-cols-4 gap-4 items-center">
+                <label for="nik" class="font-bold text-green-900 col-span-1">NIK</label>
+                <input type="text" id="nik" name="nik" placeholder="Nomor Induk Kependudukan" required
+                    class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
+                    value="{{ old('nik') }}">
+                @error('nik')
+                    <p class="text-red-500 text-sm col-span-4">{{ $message }}</p>
+                @enderror
             </div>
-            
-            <div class="grid grid-cols-5 gap-4 items-center">
-                <label for="ktp" class="font-semibold text-green-900 col-span-1">KTP</label>
-                <div class="col-span-4">
-                    <input type="file" id="ktp" name="ktp" placeholder="contoh.pdf" 
-                        class="w-full p-3 rounded bg-[#8DA47E]/70 text-white placeholder-white focus:outline-none">
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-5 gap-4 items-center">
-                <label for="jenis_subsidi" class="font-semibold text-green-900 col-span-1">Jenis Subsidi</label>
-                <div class="col-span-4 relative">
-                    <select id="jenis_subsidi" name="jenis_subsidi" placeholder=""
-                        class="w-full p-3 rounded bg-[#8DA47E]/70 text-white appearance-none focus:outline-none">
+
+            <div class="grid grid-cols-4 gap-4 items-center">
+                <label for="jenis_subsidi" class="font-bold text-green-900 col-span-1">Jenis Subsidi</label>
+                <div class="col-span-3 relative">
+                    <select id="jenis_subsidi" name="jenis_subsidi"
+                        class="w-full p-3 rounded bg-[#294B29] opacity-50 text-white appearance-none focus:outline-none">
                         <option value="" disabled selected>Pilih Jenis Subsidi</option>
                         <option value="pupuk">Pupuk</option>
                         <option value="benih">Benih</option>
                         <option value="pestisida">Pestisida</option>
                     </select>
                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                         </svg>
                     </div>
                 </div>
             </div>
-            
             <div id="pupuk_fields" class="space-y-4 hidden">
-                <div class="grid grid-cols-5 gap-4 items-center">
-                    <label for="jenis_pupuk" class="font-semibold text-green-900 col-span-1">Jenis Pupuk</label>
-                    <div class="col-span-4 relative">
-                        <select id="jenis_pupuk" name="jenis_pupuk" 
-                            class="w-full p-3 rounded bg-[#8DA47E]/70 text-white appearance-none focus:outline-none">
+                <!-- Jenis Pupuk -->
+                <div class="grid grid-cols-4 gap-4 items-center">
+                    <label for="jenis_pupuk" class="font-bold text-green-900 col-span-1">Jenis Pupuk</label>
+                    <div class="col-span-3 relative">
+                        <select id="jenis_pupuk" name="jenis_pupuk"
+                            class="w-full p-3 rounded bg-[#294B29] opacity-50 text-white appearance-none focus:outline-none">
                             <option value="">Pilih Jenis Pupuk</option>
                             <option value="urea">UREA</option>
                             <option value="npk">NPK</option>
                             <option value="za">ZA</option>
                         </select>
                         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </div>
                     </div>
                 </div>
-                
-                <div class="grid grid-cols-5 gap-4 items-center">
-                    <label for="volume_pupuk" class="font-semibold text-green-900 col-span-1">Volume Pupuk</label>
-                    <div class="col-span-4 relative">
-                    <input type="number" id="Volume_Pupuk" name="Volume_Pupuk" placeholder="Masukkan volume (kg/liter)"
-                    class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none">
-                        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
-                        </div>
-                    </div>
+            
+                <!-- Volume Pupuk -->
+                <div class="grid grid-cols-4 gap-4 items-center">
+                    <label for="volume_pupuk" class="font-bold text-green-900 col-span-1">Volume Pupuk</label>
+                    <input type="number" id="volume_pupuk" name="volume_pupuk"
+                        placeholder="Masukkan volume (kg/liter)"
+                        class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none">
                 </div>
             </div>
             
+            <!-- Tombol Kirim -->
             <div class="flex justify-end pt-4">
-                <button type="submit" class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 transition">
+                <button type="submit"
+                    class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 transition">
                     KIRIM
                 </button>
             </div>
         </form>
-        
     </div>
-    
-    <x-footer/>
-    
+
+    @include('components.footer')
     <script>
-        document.getElementById('jenis_subsidi').addEventListener('change', function() {
+        // Tampilkan input tambahan saat pilih "pupuk"
+        document.getElementById('jenis_subsidi').addEventListener('change', function () {
             const pupukFields = document.getElementById('pupuk_fields');
             if (this.value === 'pupuk') {
                 pupukFields.classList.remove('hidden');
@@ -157,40 +120,41 @@
                 pupukFields.classList.add('hidden');
             }
         });
-        
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
+    
+        // Saat form dikirim (biarkan dikirim ke Laravel)
+        document.querySelector('form').addEventListener('submit', function () {
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.disabled = true;
+            submitButton.innerText = "Mengirim...";
+        });
+    
+        // Tampilkan SweetAlert jika ada session success dari backend Laravel
+        @if (session('success'))
             Swal.fire({
-                title: "Pengajuan Subsidi Berhasil",
-                icon: "success",
-                draggable: true
+                title: 'Pengajuan Berhasil!',
+                text: '{{ session("success") }}',
+                icon: 'success',
+                confirmButtonText: 'OK',
+                draggable:true
+
             });
-        });
-        
-        // Close modal when clicking anywhere on the page
-        document.addEventListener('click', function(e) {
-            const modal = document.getElementById('successModal');
-            if (!modal.classList.contains('hidden')) {
-                modal.classList.add('hidden');
-            }
-        });
-        
-        document.getElementById('notificationBtn').addEventListener('click', function(e) {
+        @endif
+    
+        // Toggle notifikasi
+        document.getElementById('notificationBtn')?.addEventListener('click', function (e) {
             e.stopPropagation();
             const dropdown = document.getElementById('notificationDropdown');
             dropdown.classList.toggle('hidden');
         });
-        
-        document.getElementById('notificationDropdown').addEventListener('click', function(e) {
+    
+        document.getElementById('notificationDropdown')?.addEventListener('click', function (e) {
             e.stopPropagation();
         });
-        
-        window.addEventListener('click', function() {
+    
+        window.addEventListener('click', function () {
             const dropdown = document.getElementById('notificationDropdown');
-            dropdown.classList.add('hidden');
+            dropdown?.classList.add('hidden');
         });
-    </script>
-    @include('components.footer')
+    </script> 
 </body>
-
 </html>
