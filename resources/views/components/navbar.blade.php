@@ -34,9 +34,13 @@
         </div>
 
         <!-- Sign In -->
+        @if(Auth::check())
+        {{ Auth::user()->name }}
+        @else
         <button class="bg-[#143D1E] text-white px-4 py-1.5 rounded-full text-sm hover:bg-green-900">
             <a href="{{ route('login') }}">Sign in</a>
         </button>
+        @endif
     </div>
 </header>
 

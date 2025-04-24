@@ -5,6 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Pesan Pengaduan</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -41,13 +42,22 @@
             </div>
 
             <div class="flex justify-end pt-4">
-                <button type="submit"
-                        class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 transition">
+                <button type="submit" class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 transition">
                     KIRIM
                 </button>
             </div>
         </form>
     </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            Swal.fire({
+                title: "Pengajuan Subsidi Berhasil",
+                icon: "success",
+                draggable: true
+            });
+        });    
+    </script>
     <x-footer/>
 </body>
 </html>

@@ -7,6 +7,7 @@
     <title>Pengajuan Subsidi</title>
     <script src="js/script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -90,7 +91,7 @@
                 <div class="col-span-4 relative">
                     <select id="jenis_subsidi" name="jenis_subsidi" placeholder=""
                         class="w-full p-3 rounded bg-[#8DA47E]/70 text-white appearance-none focus:outline-none">
-                        <option value="">Pilih Jenis Subsidi</option>
+                        <option value="" >Pilih Jenis Subsidi</option>
                         <option value="pupuk">Pupuk</option>
                         <option value="benih">Benih</option>
                         <option value="pestisida">Pestisida</option>
@@ -143,18 +144,6 @@
             </div>
         </form>
         
-        <div id="successModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
-            <div class="bg-[#F5F5DC] p-8 rounded-lg text-center max-w-md">
-                <div class="flex justify-center mb-4">
-                    <div class="bg-green-500 rounded-full p-2">
-                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                        </svg>
-                    </div>
-                </div>
-                <h2 class="text-xl font-bold text-gray-800 mb-2">Pengajuan Anda Berhasil Dikirim!</h2>
-            </div>
-        </div>
     </div>
     
     <x-footer/>
@@ -171,7 +160,11 @@
         
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            document.getElementById('successModal').classList.remove('hidden');
+            Swal.fire({
+                title: "Pengajuan Subsidi Berhasil",
+                icon: "success",
+                draggable: true
+            });
         });
         
         // Close modal when clicking anywhere on the page
