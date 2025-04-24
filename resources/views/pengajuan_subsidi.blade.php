@@ -91,7 +91,7 @@
                 <div class="col-span-4 relative">
                     <select id="jenis_subsidi" name="jenis_subsidi" placeholder=""
                         class="w-full p-3 rounded bg-[#8DA47E]/70 text-white appearance-none focus:outline-none">
-                        <option value="" >Pilih Jenis Subsidi</option>
+                        <option value="" disabled selected>Pilih Jenis Subsidi</option>
                         <option value="pupuk">Pupuk</option>
                         <option value="benih">Benih</option>
                         <option value="pestisida">Pestisida</option>
