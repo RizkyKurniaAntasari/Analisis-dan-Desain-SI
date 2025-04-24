@@ -27,7 +27,14 @@ Route::get('/petugas/p_subsidi', function(){
     return view ('petugas.p_subsidi');
 });
 
+Route::get('/petugas/p_pengaturan', function(){
+    return view ('petugas.p_pengaturan');
+});
 
+// user
+Route::get('pengajuan_subsidi', function(){
+    return view ('pengajuan_subsidi');
+});
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
