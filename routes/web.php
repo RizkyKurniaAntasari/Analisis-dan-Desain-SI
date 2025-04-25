@@ -34,11 +34,6 @@ Route::get('/petugas/p_pengaturan', function(){
     return view ('petugas.p_pengaturan');
 });
 
-// user
-// Route::get('pengajuan_subsidi', function(){
-//     return view ('pengajuan_subsidi');
-// });
-
 Route::get('/pengajuan_subsidi', [SubsidiController::class, 'index']);
 Route::post('/store', [SubsidiController::class, 'store'])->name('pengajuan_subsidi.store');
  
@@ -59,6 +54,3 @@ Route::get('profile', [AuthController::class, 'profile'])->name('profile');
 Route::get('pengaduan', [AuthController::class, 'pengaduan'])->name('pengaduan');
 Route::get('pengumuman', [AuthController::class, 'pengumuman'])->name('pengumuman');
 Route::get('statistik', [AuthController::class, 'statistik'])->name('statistik');
-
-// // SUBSIDI
-// use App\Http\Controllers\SubsidiController;

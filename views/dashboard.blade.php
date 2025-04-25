@@ -22,13 +22,13 @@
     <section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-white ">
         <!-- Gambar kiri -->
         <div class="md:col-span-1 overflow-hidden transition-transform hover:scale-105 ease-in-out duration-300">
-            <img src="\img\left.jpg" alt="Tanaman" class="rounded-md w-full h-full object-cover">
+            <img src="icon/beranda_sayur.png" alt="Tanaman" class="rounded-md w-full h-full object-cover">
         </div>
 
         <!-- Tengah -->
         <div
             class="md:col-span-1 overflow-hidden relative transition-transform hover:scale-105 ease-in-out duration-300">
-            <img src="\img\tengah.jpg" alt="" class="rounded-md w-full h-64 object-cover">
+            <img src="icon/beranda_kopi.png" alt="" class="rounded-md w-full h-64 object-cover">
             <div class="absolute bottom-0 bg-black bg-opacity-60 text-white p-4 w-full">
                 <h2 class="text-lg font-semibold">Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi
                     Berkualitas Tinggi</h2>
@@ -154,7 +154,7 @@
         </div>
 
         <!-- Tombol Lihat Semua -->
-        <div class="mt-8 flex justify-center">
+        <div class="mt-8 flex justify-left">
             <button
                 class="bg-[#1D592D] text-white px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#14491F] transition">
                 Lihat semua artikel
@@ -166,17 +166,17 @@
     <footer class="bg-green-900 text-white px-6 py-6 mt-8">
         <div class="flex flex-col md:flex-row justify-between text-sm">
             <div class="mb-4 md:mb-0">
-                <img src="\img\logo-simapan.png" class="w-32 mb-2" alt="SIMAPAN Logo">
-                <p>Sistem Informasi Manajemen Pertanian Kabupaten Lampung Barat</p>
-                <p class="mt-2 text-xs">© Copyright 2025. Kelompok Lincari - Jurusan Ilmu Komputer, Universitas Lampung
+                <img src="icon/logo_simapan_lengkap.png" class="w-32 mb-2" alt="SIMAPAN Logo">
+<!--                 <p>Sistem Informasi Manajemen Pertanian Kabupaten Lampung Barat</p> -->
+                <p class="mt-2 text-xs">© Copyright 2025. Kelompok Linasari - Jurusan Ilmu Komputer, Universitas Lampung
                 </p>
             </div>
             <div>
                 <p>Kantor Dinas Pertanian Kab. Lambar</p>
                 <p>Jl. Raden Intan, Way Mengaku, Komp. Perkantoran Pemkab Lampung Barat, Liwa, Lampung, 34842</p>
-                <p>📞 Telp: 1234-5678-910</p>
-                <p>📱 WhatsApp: 0812-3456-7890</p>
-                <p>📧 Email: dinaspertanianlambar@gmail.com</p>
+                <img src="icon/telepon_footer.png" class="w-5 mb-1" alt="telepon Logo"> <p> Telp: 1234-5678-910</p>
+                <img src="icon/whatsapp_footer.png" class="w-5 mb-1" alt="whatsapp Logo"> <p> WhatsApp: 0812-3456-7890</p>
+                <img src="icon/email_footer.png" class="w-5 mb-1" alt="email Logo"> <p> Email: dinaspertanianlambar@gmail.com</p>
             </div>
         </div>
     </footer>
