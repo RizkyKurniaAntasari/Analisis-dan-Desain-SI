@@ -18,15 +18,6 @@
         {{-- Navbar --}}
         @include('petugas.p_components.p_navbar')
         <div class="bg-white rounded-lg shadow-md p-6">
-            <h1 class="text-2xl font-bold mb-4 flex items-center text-green-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M9 17v-2a4 4 0 00-4-4H5a2 2 0 010-4h14a2 2 0 010 4h-.1a4 4 0 00-3.9 4v2M12 3v4m0 4h.01" />
-                </svg>
-                PENGADUAN
-            </h1>
-
             @php
                 $pengaduan = [
                     (object) [
@@ -75,9 +66,9 @@
             @endphp
 
             <div class="overflow-x-auto">
-                <table class="min-w-full bg-white border rounded-lg">
-                    <thead class="bg-[#f0f9eb] text-green-700">
-                        <tr>
+                <table class="min-w-full bg-white rounded-lg">
+                    <thead class="bg-[#fff] text-[#294B29]">
+                        <tr class="border-b-2 border-black">
                             <th class="p-3 text-left">Username</th>
                             <th class="p-3 text-left">Pesan</th>
                             <th class="p-3 text-left">Email</th>
@@ -98,7 +89,7 @@
                                 <td class="p-3">{{ $data->tanggal }}</td>
                                 <td class="p-3">
                                     <button
-                                        class="bg-green-700 text-white px-4 py-1 rounded-full hover:bg-green-800">lihat</button>
+                                        class="bg-[#39741A] text-white px-4 py-1 rounded-md hover:bg-green-800">Lihat Selengkapnya</button>
                                 </td>
                             </tr>
                         @endforeach

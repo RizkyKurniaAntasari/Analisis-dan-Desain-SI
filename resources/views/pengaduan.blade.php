@@ -17,25 +17,25 @@
             @csrf
 
             <div class="grid grid-cols-4 gap-4 items-center">
-                <label for="nama" class="font-semibold text-green-900 col-span-1">Nama</label>
+                <label for="nama" class="pl-36 font-bold text-green-900 col-span-1">Nama</label>
                 <input type="text" id="nama" name="nama" placeholder="Nama Anda"
                        class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none">
             </div>
 
             <div class="grid grid-cols-4 gap-4 items-center">
-                <label for="alamat" class="font-semibold text-green-900 col-span-1">Alamat</label>
+                <label for="alamat" class="pl-36 font-bold text-green-900 col-span-1">Alamat</label>
                 <input type="text" id="alamat" name="alamat" placeholder="Alamat Anda"
                        class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none">
             </div>
 
             <div class="grid grid-cols-4 gap-4 items-center">
-                <label for="email" class="font-semibold text-green-900 col-span-1">E-mail</label>
+                <label for="email" class="pl-36 font-bold text-green-900 col-span-1">E-mail</label>
                 <input type="email" id="email" name="email" placeholder="Alamat E-mail"
                        class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none">
             </div>
 
             <div class="grid grid-cols-4 gap-4 items-start">
-                <label for="pesan" class="font-semibold text-green-900 col-span-1">Isi Pesan</label>
+                <label for="pesan" class="pl-36 font-bold text-green-900 col-span-1">Isi Pesan</label>
                 <textarea id="pesan" name="pesan" rows="6" placeholder="Pesan"
                           class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none resize-none"></textarea>
             </div>

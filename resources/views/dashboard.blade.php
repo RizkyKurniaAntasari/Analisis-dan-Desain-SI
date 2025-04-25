@@ -1,57 +1,3 @@
-{{-- <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel 11 Custom Dashboard - ItSolutionStuff.com</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  </head>
-<body>
-    
-<main>
-  <div class="container py-4">
-    <header class="pb-3 mb-4 border-bottom">
-        <div class="row">
-            <div class="col-md-11">
-                <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-                    <img src="https://www.itsolutionstuff.com/assets/images/logo-it-2.png" alt="BootstrapBrain Logo" width="300">
-                </a>          
-            </div>
-            <div class="col-md-1">
-                <a class="dropdown-item" href="{{ route('logout') }}"
-                   onclick="event.preventDefault();
-                                 document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
-        </div>
-      
-    </header>
-
-    <div class="p-5 mb-4 bg-light rounded-3">
-      <div class="container-fluid py-5">
-
-        @session('success')
-            <div class="alert alert-success" role="alert"> 
-              {{ $value }}
-            </div>
-        @endsession
-
-        <h1 class="display-5 fw-bold">Hi, {{ auth()->user()->name }}</h1>
-        <p class="col-md-8 fs-4">Welcome to dashboard.<br/>Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-        <button class="btn btn-primary btn-lg" type="button">Dashboard</button>
-      </div>
-    </div>
-
-  </div>
-</main>
-
-</body>
-</html> --}}
 <!DOCTYPE html>
 <html lang="id">
 
@@ -74,13 +20,13 @@
     <section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-[#DBE7C9]">
         <!-- Gambar kiri -->
         <div class="md:col-span-1 overflow-hidden transition-transform hover:scale-105 ease-in-out duration-300">
-            <img src="\img\left.jpg" alt="Tanaman" class="rounded-md w-full h-full object-cover">
+            <img src="/img/left.jpg" alt="Tanaman" class="rounded-md w-full h-full object-cover">
         </div>
 
         <!-- Tengah -->
         <div
             class="md:col-span-1 overflow-hidden relative transition-transform hover:scale-105 ease-in-out duration-300">
-            <img src="\img\tengah.jpg" alt="" class="rounded-md w-full h-64 object-cover">
+            <img src="/img/tengah.jpg" alt="" class="rounded-md w-full h-64 object-cover">
             <div class="absolute bottom-0 bg-black bg-opacity-60 text-white p-4 w-full">
                 <h2 class="text-lg font-semibold">Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi
                     Berkualitas Tinggi</h2>
@@ -90,17 +36,19 @@
 
         <!-- Gambar kanan -->
         <div class="md:col-span-1 overflow-hidden transition-transform hover:scale-105 ease-in-out duration-300">
-            <img src="\img\cabai.jpeg" alt="cabai.jpeg" class="rounded-md w-full h-full object-cover">
+            <img src="/img/cabai.jpeg" alt="cabai.jpeg" class="rounded-md w-full h-full object-cover">
         </div>
     </section>
 
     <!-- Artikel + Statistik -->
-    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-6 bg-green-200">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-6 bg-[#294B29]">
         <!-- Artikel -->
-        <div class="bg-green-800 text-white p-6 rounded-md">
-            <h3 class="font-bold text-lg mb-2">PERAN ARTIFICIAL INTELLIGENCE (AI)</h3>
-            <p class="text-sm">DALAM MEMPREDIKSI HAMA DAN PENYAKIT PADA TANAMAN SAYURAN</p>
+        <div class="bg-[#294B29] text-white p-6 rounded-md">
+            <h3 class="font-bold text-lg mb-2">PERAN ARTIFICIAL INTELLIGENCE (AI) DALAM MEMPREDIKSI HAMA DAN PENYAKIT PADA TANAMAN SAYURAN</h3>
             <p class="mt-4 text-xs">23 Maret 2025</p>
+            <p class="text-justify">Lampung barat - Dalam dunia pertanian modern, keberlanjutan produksi sayuran sering kali menghadapi tantangan besar akibat serangan hama dan penyakit. Jika tidak ditangani dengan baik, serangan ini dapat menyebabkan penurunan hasil panen yang signifikan dan berdampak pada ketahanan pangan  serta ekonomi petani. Namun, dengan kemajuan Artificial Intelligence (AI), kini petani dapat memanfaatkan teknologi untuk memprediksi dan mengendalikan hama serta penyakit secara lebih cepat dan akurat. 
+                <br><br>
+                AI bekerja dengan cara mengumpulkan dan menganalisis data dari berbagai sumber, seperti citra satelit, sensor cuaca, foto tanaman, dan data historis tentang serangan hama atau penyakit.</p>
         </div>
 
         <!-- Statistik -->
