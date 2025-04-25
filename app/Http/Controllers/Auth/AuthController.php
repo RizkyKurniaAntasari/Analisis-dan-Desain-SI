@@ -107,7 +107,10 @@ class AuthController extends Controller
         return redirect("login")->withSuccess('Opps! You do not have access');
     }
     
+    public function article(){
 
+        return view('article'); // Make sure this view exists
+    }
 
     public function create(array $data)
     {

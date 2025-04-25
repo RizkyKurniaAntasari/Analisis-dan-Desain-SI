@@ -50,7 +50,7 @@
         <li><a href="dashboard" class="hover:text-yellow-400">BERANDA</a></li>
         <li><a href="{{ route('profile') }}" class="hover:text-yellow-400">PROFIL</a></li>
         <li><a href="statistik" class="hover:text-yellow-400">STATISTIK</a></li>
-        <li><a href="#" class="hover:text-yellow-400">ARTIKEL</a></li>
+        <li><a href="article" class="hover:text-yellow-400">ARTIKEL</a></li>
         <li><a href="pengumuman" class="hover:text-yellow-400">PENGUMUMAN</a></li>
         <li><a href="#" class="hover:text-yellow-400">PENYULUHAN</a></li>
         <li><a href="pengaduan" class="hover:text-yellow-400">PENGADUAN</a></li>
