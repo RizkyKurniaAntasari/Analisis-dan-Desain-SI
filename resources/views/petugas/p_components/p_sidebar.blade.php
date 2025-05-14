@@ -49,11 +49,11 @@
          <span>UPDATE HARGA</span>
      </a>
      
-     <a href="{{ url('petugas/p_informasi-pertanian') }}"
+     <a href="{{ url('petugas/p_informasiPertanian') }}"
         class="flex items-center px-4 py-3 rounded-l-full ml-3
-               {{ Request::is('petugas/p_informasi-pertanian*') ? 'bg-[#CBDAA9] text-black font-bold' : 'hover:bg-[#417B3B] text-white' }}">
+               {{ Request::is('petugas/p_informasiPertanian*') ? 'bg-[#CBDAA9] text-black font-bold' : 'hover:bg-[#417B3B] text-white' }}">
          <span class="mr-3">
-             <img src="{{ asset(Request::is('petugas/p_informasi-pertanian*') ? 'icon/informasi_pertanian_hitam.png' : 'icon/informasi_pertanian_putih.png') }}" class="w-5">
+             <img src="{{ asset(Request::is('petugas/p_informasiPertanian*') ? 'icon/informasi_pertanian_hitam.png' : 'icon/informasi_pertanian_putih.png') }}" class="w-5">
          </span>
          <span>INFORMASI <br>PERTANIAN</span>
      </a>
