@@ -13,6 +13,7 @@ Route::get('/', function(){
     return view('dashboard'); // sebelumnya welcome
 });
 
+// Petgas
 Route::get('/petugas/p_login', function(){
     return view ('petugas.p_login');
 });
@@ -37,6 +38,15 @@ Route::get('/petugas/p_subsidi', function(){
 
 Route::get('/petugas/p_pengaturan', function(){
     return view ('petugas.p_pengaturan');
+});
+
+// Admin
+Route::get('/admin',function(){
+    return view ('admin.a_index');
+});
+
+Route::get('/admin/a_akun_terdaftar',function(){
+    return view ('admin.a_akun_terdaftar');
 });
 
 Route::get('/pengajuan_subsidi', [SubsidiController::class, 'index']);

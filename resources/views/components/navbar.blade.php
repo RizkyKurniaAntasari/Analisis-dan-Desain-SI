@@ -52,7 +52,7 @@
         <li><a href="dashboard" class="hover:text-yellow-400 m-5">BERANDA</a></li>
         <li><a href="{{ route('profile') }}" class=" m-5 hover:text-yellow-400">PROFIL</a></li>
         <li><a href="statistik" class="  m-5 hover:text-yellow-400">STATISTIK</a></li>
-        <li><a href="{{ route('users.artikel') }}" class="  m-5 hover:text-yellow-400">ARTIKEL</a></li>
+        {{-- <li><a href="{{ route('users.artikel') }}" class="  m-5 hover:text-yellow-400">ARTIKEL</a></li> --}}
         <li><a href="pengumuman" class="m-5 hover:text-yellow-400">PENGUMUMAN</a></li>
         <li><a href="penyuluhan" class="  m-5 hover:text-yellow-400">PENYULUHAN</a></li>
         <li><a href="pengaduan" class=" m-5 hover:text-yellow-400">PENGADUAN</a></li>
