@@ -77,4 +77,6 @@ Route::get('/artikel/{id}', [ArtikelController::class, 'show'])->name('artikel.s
 Route::get('admin/a_create_artikel', [ArtikelController::class, 'create'])->name('artikel.create');
 Route::post('admin/a_create_artikel', [ArtikelController::class, 'store'])->name('artikel.store');
 
-
+Route::get('/petugas/p_informasiPertanian', function(){
+    return view ('petugas.p_informasiPertanian');
+});
