@@ -26,16 +26,20 @@
                 <!-- Form Container -->
                 <div class="border border-[#1C3D1C] bg-[#CBDAA9] p-6 rounded-b-md">
                     <form id="formHarga" action="#" method="POST" class="space-y-8">
-                        <div class="flex items-center space-x-4">
-                            <label for="harga" class="w-20 font-semibold text-[#1C3D1C]">Harga</label>
+                        <div class="flex items-center space-x-4 mt-4 pl-20">
+                            <label for="harga" class="w-24 font-semibold text-[#1C3D1C] text-center">Harga</label>
                             <input type="number" name="harga" id="harga" placeholder="Ketik disini..."
-                                class="bg-[#79966C] text-white placeholder-white w-full max-w-md px-4 py-2 rounded shadow focus:outline-none" required>
+                                class="bg-[#79966C] text-white placeholder-white w-full max-w-3xl px-6 py-2 rounded shadow focus:outline-none text-left" required>
                         </div>
                     </form>
                 </div>
 
                 <!-- Tombol Simpan di luar form -->
-                <div class="flex justify-end mt-60">
+                <div class="flex justify-end space-x-4 mt-80">
+                    <a href="{{ url('petugas/p_update-harga') }}" 
+                        class="bg-gray-500 text-white px-6 py-2 rounded shadow hover:bg-gray-600">
+                        Kembali
+                    </a>
                     <button type="submit" form="formHarga"
                         class="bg-[#1C3D1C] text-white px-6 py-2 rounded shadow hover:bg-[#163216]">
                         Simpan
