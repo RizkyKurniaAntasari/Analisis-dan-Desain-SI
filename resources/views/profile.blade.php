@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
-    <title>SIMAPAN - Dashboard</title>
+    <title>SIMAPAN - Profile</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script>
@@ -21,17 +20,18 @@
         }
     </script>
 </head>
-<body class="bg-green-100 font-poppins">
-        <x-navbar />
+<body class="bg-[#DBE7C9] font-poppins flex flex-col min-h-screen">
+    <div class="flex-1">
+       @include('components.navbar')
         {{-- CONTENT --}}
-        <div class="max-w-3xl mx-auto space-y-4 min-h-[400px] ">
+        <div class="max-w-3xl mx-auto space-y-4 py-10 min-h-[500px]">
             <!-- SEJARAH -->
             <div class="bg-[#294B2D] text-white rounded shadow mt-10">
                 <button onclick="toggleContent('sejarah', this)"
                     class="w-full text-left px-6 py-4 font-bold flex items-center gap-2">
                     <span class="icon">></span> SEJARAH ORGANISASI
                 </button>
-                <div id="sejarah" class="bg-green-100 text-green-900 px-6 py-4 hidden text-justify">
+                <div id="sejarah" class="bg-[#DBE7C9] text-[#294B29] px-6 py-4 hidden text-justify border border-green-900 rounded-b">
                     <p>
                         Sejarah Dinas Pertanian Kabupaten Lampung Barat berawal dari pembentukan Kabupaten Lampung Barat
                         itu
@@ -60,7 +60,7 @@
                     class="w-full text-left px-6 py-4 font-bold flex items-center gap-2">
                     <span class="icon">></span> VISI DAN MISI ORGANISASI
                 </button>
-                <div id="visi" class="bg-green-100 text-green-900 px-6 py-4 hidden text-justify">
+                <div id="visi" class="bg-[#DBE7C9] text-[#294B29] px-6 py-4 hidden text-justify border border-green-900 rounded-b">
                     <p class="font-bold">
                         VISI
                     </p>
@@ -86,7 +86,7 @@
                     class="w-full text-left px-6 py-4 font-bold flex items-center gap-2">
                     <span class="icon">></span> TUGAS DAN FUNGSI ORGANISASI
                 </button>
-                <div id="tugas" class="bg-green-100 text-green-900 px-6 py-4 hidden text-justify">
+                <div id="tugas" class="bg-[#DBE7C9] text-[#294B29] px-6 py-4 hidden text-justify border border-green-900 rounded-b">
                     <p>
                         Dasar Hukum pembentukan Dinas Tanaman Pangan dan Hortikultura Kabupaten Lampung Barat adalah
                         Peraturan Daerah Kabupaten Lampung Barat Nomor 4 Tahun 2023 tentang Perubahan Kedua Atas
@@ -122,7 +122,7 @@
                     class="w-full text-left px-6 py-4 font-bold flex items-center gap-2">
                     <span class="icon">></span> STRUKTUR ORGANISASI
                 </button>
-                <div id="struktur" class="bg-green-100 text-green-900 px-6 py-4 hidden text-justify">
+                <div id="struktur" class="bg-[#DBE7C9] text-[#294B29] px-6 py-4 hidden text-justify border border-green-900 rounded-b">
                     <P>
                         Dalam melaksanakan tugas dan kewajiban Dinas dipimpin oleh Kepala Dinas yang dalam pelaksanaan
                         tugasnya dibantu oleh pejabat struktural dan pejabat fungsional sebagaimana terdapat dalam
@@ -134,25 +134,7 @@
                 </div>
             </div>
         </div>
-
-        {{-- FOOTER  --}}
-        <footer class="bg-[#294B2D] text-white px-6 py-6 mt-12">
-            <div class="flex flex-col md:flex-row justify-between text-sm">
-                <div class="mb-4 md:mb-0">
-                    <img src="\img\logo-simapan.png" class="w-32 mb-2" alt="SIMAPAN Logo">
-                    <p>Sistem Informasi Manajemen Pertanian Kabupaten Lampung Barat</p>
-                    <p class="mt-2 text-xs">© Copyright 2025. Kelompok Lincari - Jurusan Ilmu Komputer, Universitas
-                        Lampung
-                    </p>
-                </div>
-                <div>
-                    <p>Kantor Dinas Pertanian Kab. Lambar</p>
-                    <p>Jl. Raden Intan, Way Mengaku, Komp. Perkantoran Pemkab Lampung Barat, Liwa, Lampung, 34842</p>
-                    <p>📞 Telp: 1234-5678-910</p>
-                    <p>📱 WhatsApp: 0812-3456-7890</p>
-                    <p>📧 Email: dinaspertanianlambar@gmail.com</p>
-                </div>
-            </div>
-        </footer>
+    </div>
+        @include('components.footer')
 </body>
 </html>

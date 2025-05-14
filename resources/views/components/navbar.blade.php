@@ -4,7 +4,7 @@
 <header class="bg-[#D6E6C5] px-8 py-2 flex items-center justify-between font-poppins">
     <!-- Kiri: Logo + Nama -->
     <div class="flex items-center space-x-4">
-        <img src="icon/logo_simapan_navbar.png" class="w-72 md:w-[500px] object-contain" />
+        <img src="{{ asset('icon/logo_simapan_navbar.png') }}" class="w-72 md:w-[500px] object-contain" />
     </div>
 
     <!-- Kanan: Sosmed + Signin/Auth + Toggle Menu -->

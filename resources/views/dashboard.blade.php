@@ -15,9 +15,9 @@
     </style>
 </head>
 
-<body class="bg-green-100 font-poppins">
+<body class="bg-[#DBE7C9] font-poppins">
 
-    <x-navbar />
+    @include('components.navbar')
     <section class="grid grid-cols-1 md:grid-cols-3 gap-4 p-6 bg-[#DBE7C9]">
         <img src="{{ asset('icon/beranda_sayur.png') }}" alt=""
             class="rounded-md hover:scale-105 transition w-full h-full object-cover" />
@@ -191,7 +191,8 @@
             </button>
         </div>
     </section>
-    <x-footer />
+    
+    @include('components.footer')
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
