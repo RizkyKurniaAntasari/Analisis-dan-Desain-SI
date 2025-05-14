@@ -14,9 +14,9 @@
 
             // Ubah ikon
             if (content.classList.contains("hidden")) {
-                icon.textContent = "›"; // Panah ke kanan
+                icon.textContent = ">"; // Panah ke kanan
             } else {
-                icon.textContent = "⌄"; // Panah ke bawah
+                icon.textContent = "v"; // Panah ke bawah
             }
         }
     </script>
@@ -29,7 +29,7 @@
             <div class="bg-[#294B2D] text-white rounded shadow mt-10">
                 <button onclick="toggleContent('sejarah', this)"
                     class="w-full text-left px-6 py-4 font-bold flex items-center gap-2">
-                    <span class="icon">›</span> SEJARAH ORGANISASI
+                    <span class="icon">></span> SEJARAH ORGANISASI
                 </button>
                 <div id="sejarah" class="bg-green-100 text-green-900 px-6 py-4 hidden text-justify">
                     <p>
@@ -58,7 +58,7 @@
             <div class="bg-[#294B2D] text-white rounded shadow">
                 <button onclick="toggleContent('visi', this)"
                     class="w-full text-left px-6 py-4 font-bold flex items-center gap-2">
-                    <span class="icon">›</span> VISI DAN MISI ORGANISASI
+                    <span class="icon">></span> VISI DAN MISI ORGANISASI
                 </button>
                 <div id="visi" class="bg-green-100 text-green-900 px-6 py-4 hidden text-justify">
                     <p class="font-bold">
@@ -84,7 +84,7 @@
             <div class="bg-[#294B2D] text-white rounded shadow">
                 <button onclick="toggleContent('tugas', this)"
                     class="w-full text-left px-6 py-4 font-bold flex items-center gap-2">
-                    <span class="icon">›</span> TUGAS DAN FUNGSI ORGANISASI
+                    <span class="icon">></span> TUGAS DAN FUNGSI ORGANISASI
                 </button>
                 <div id="tugas" class="bg-green-100 text-green-900 px-6 py-4 hidden text-justify">
                     <p>
@@ -120,7 +120,7 @@
             <div class="bg-[#294B2D] text-white rounded shadow">
                 <button onclick="toggleContent('struktur', this)"
                     class="w-full text-left px-6 py-4 font-bold flex items-center gap-2">
-                    <span class="icon">›</span> STRUKTUR ORGANISASI
+                    <span class="icon">></span> STRUKTUR ORGANISASI
                 </button>
                 <div id="struktur" class="bg-green-100 text-green-900 px-6 py-4 hidden text-justify">
                     <P>

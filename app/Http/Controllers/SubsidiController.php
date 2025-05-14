@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Subsidi;
+use Illuminate\Support\Facades\Auth;
 
 class SubsidiController extends Controller
 {
     public function index()
     {
-        $subsidi = Subsidi::all();
-        return view('pengajuan_subsidi', compact('subsidi'));
+        if(Auth::check()){
+            $subsidi = Subsidi::all();
+            return view('pengajuan_subsidi', compact('subsidi'));
+        }
+        return redirect("login")->withSuccess('Opps! You do not have access');
     }
 
     public function store(Request $request)
@@ -18,7 +22,7 @@ class SubsidiController extends Controller
         $validated = $request->validate([
             'nama' => 'required|string|max:100',
             'alamat' => 'required|string',
-            'nik' => 'required|numeric|digits:16',
+            'nik' => 'required|string|size:16',
             'jenis_subsidi' => 'required|string',
         ]);
 

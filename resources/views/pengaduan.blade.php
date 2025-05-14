@@ -1,5 +1,4 @@
 <!-- resources/views/pengaduan.blade.php -->
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -13,7 +12,7 @@
     <div class=" bg-[#DBE7C9] p-10 rounded min-h-screen items-center justify-center">
         <h1 class="text-center text-2xl font-bold text-green-900 mb-8">PESAN PENGADUAN</h1>
 
-        <form action="" method="POST" class="space-y-6">
+        <form action="{{ route('simpan.pengaduan') }}" method="POST" class="space-y-6" autocomplete="off">
             @csrf
 
             <div class="grid grid-cols-4 gap-4 items-center">
@@ -30,13 +29,13 @@
 
             <div class="grid grid-cols-4 gap-4 items-center">
                 <label for="email" class="pl-36 font-bold text-green-900 col-span-1">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Alamat E-mail"
+                <input type="text" id="email" name="email" placeholder="Alamat E-mail"
                        class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none">
             </div>
 
             <div class="grid grid-cols-4 gap-4 items-start">
-                <label for="pesan" class="pl-36 font-bold text-green-900 col-span-1">Isi Pesan</label>
-                <textarea id="pesan" name="pesan" rows="6" placeholder="Pesan"
+                <label for="isi_pesan" class="pl-36 font-bold text-green-900 col-span-1">Isi Pesan</label>
+                <textarea id="isi_pesan" name="isi_pesan" rows="6" placeholder="Pesan" type ="text"
                           class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none resize-none"></textarea>
             </div>
 
@@ -49,5 +48,27 @@
         </form>
     </div>
     <x-footer/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    // Saat form dikirim (biarkan dikirim ke Laravel)
+    document.querySelector('form').addEventListener('submit', function () {
+        const submitButton = this.querySelector('button[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.innerText = "Mengirim...";
+    });
+
+    // Tampilkan SweetAlert jika ada session success dari backend Laravel
+    @if (session('success'))
+        Swal.fire({
+            title: 'Pengajuan Berhasil!',
+            text: '{{ session("success") }}',
+            icon: 'success',
+            confirmButtonText: 'OK'
+        });
+    @endif
+</script>
+
 </body>
+
 </html>

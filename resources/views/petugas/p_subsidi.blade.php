@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengaduan</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="//cdn.datatables.net/2.2.2/js/dataTables.min.js"></script>
 

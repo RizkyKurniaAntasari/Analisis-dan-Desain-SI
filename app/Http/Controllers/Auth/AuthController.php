@@ -87,49 +87,32 @@ class AuthController extends Controller
     {
         if (Auth::check()) {
             return view('dashboard');
+        }else{
+            return view('dashboard');
+            
         }
-
         return redirect("login")->withSuccess('Opps! You do not have access');
     }
 
     // <=============================== [ P R O F I L E ] ===============================>
     public function profile()
     {
-        if (Auth::check()) {
-            return view('profile');
-        }
-        return redirect("login")->withSuccess('Opps! You do not have access');
-    }
-    // <=============================== [P E N G A D U A N ] ===============================>
-    public function pengaduan()
-    {
-        if (Auth::check()) {
-            return view('pengaduan');
-        }
-        return redirect("login")->withSuccess('Opps! You do not have access');
+            return view('profile');   
     }
     // <=============================== [ P E N G U M U M A N] ===============================>
     public function pengumuman()
     {
-        if (Auth::check()) {
-            return view('pengumuman');
-        }
-        return redirect("login")->withSuccess('Opps! You do not have access');
+            return view('pengumuman');   
     }
     // <=============================== [ S T A T I S T I K] ===============================>
     public function statistik()
     {
-        if (Auth::check()) {
             return view('statistik');
-        }
-        return redirect("login")->withSuccess('Opps! You do not have access');
+        
     }
     // <=============================== [ P E N Y U L U H A N] ===============================>
     public function penyuluhan()
     {
-        if (Auth::check()) {
             return view('penyuluhan');
-        }
-        return redirect("login")->withSuccess('Opps! You do not have access');
     }
 }

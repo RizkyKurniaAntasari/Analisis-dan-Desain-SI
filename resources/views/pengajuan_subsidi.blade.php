@@ -47,7 +47,7 @@
                     class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
                     value="{{ old('nik') }}">
                 @error('nik')
-                    <p class="text-red-500 text-sm col-span-4">{{ $message }}</p>
+                    <p class="text-red-500 text-center text-sm col-span-4">{{ $message }}</p>
                 @enderror
             </div>
 
