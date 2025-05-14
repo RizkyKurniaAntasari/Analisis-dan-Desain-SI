@@ -35,7 +35,7 @@
         </h2>
 
         {{-- Pencarian --}}
-        <div class="flex justify-between items-center mb-4 mt-0">
+        <div class="flex justify-between items-center mb-4">
             <div class="relative">
                 <input type="text" placeholder="Cari artikel..." class="rounded-full px-4 py-2 w-64 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#648B36]">
                 <svg class="absolute right-3 top-2.5 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,19 +56,9 @@
         </div>
         </div>
 
-
-        <!-- {{-- Pencarian --}}
-        <div class="flex justify-between items-center mb-4">
-            <div class="relative">
-                <input type="text" placeholder="Cari artikel..." class="rounded-full px-4 py-2 w-64 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#648B36]">
-                <svg class="absolute right-3 top-2.5 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 10a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-            </div>
-        </div> -->
 <br>
         {{-- Tab Navigasi --}}
-        <div class="border-b-8 border-[#1B3219] mb-1">
+        <div class="border-b-8 border-[#1B3219] mb-0">
             <nav class="flex space-x-4">
                 <button class="text-white bg-[#1B3219] px-4 py-2 rounded-t-lg font-semibold">Artikel</button>
                 <button class="text-[#1B3219] px-4 py-2 font-semibold hover:underline">Pengumuman</button>
@@ -77,14 +67,17 @@
         </div>
 
         {{-- Kotak Artikel --}}
-        <div class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-4 shadow">
+        <div class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-3 shadow">
             @php
                 $articles = [
                     ['tanggal' => '23 Maret 2025', 'judul' => 'Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi Berkualitas Tinggi'],
                     ['tanggal' => '17 Maret 2025', 'judul' => 'Permintaan Kopi Organik Meningkat: Peluang bagi Petani untuk Beralih ke Pertanian Berkelanjutan'],
-                    ['tanggal' => '17 Maret 2025', 'judul' => 'Pasar Sayuran Hidroponik: Meningkatnya Minat Konsumen terhadap Produk Sehat'],
-                    ['tanggal' => '17 Maret 2025', 'judul' => 'Sosialisasi Metode Fermentasi Kopi untuk Meningkatkan Kualitas Biji Kopi Petani'],
-                    ['tanggal' => '17 Maret 2025', 'judul' => 'Pasar Sayuran Hidroponik: Meningkatnya Minat Konsumen terhadap Produk Sehat'],
+                    ['tanggal' => '16 Maret 2025', 'judul' => 'Pasar Sayuran Hidroponik: Meningkatnya Minat Konsumen terhadap Produk Sehat'],
+                    ['tanggal' => '15 Maret 2025', 'judul' => 'Sosialisasi Metode Fermentasi Kopi untuk Meningkatkan Kualitas Biji Kopi Petani'],
+                    ['tanggal' => '14 Maret 2025', 'judul' => 'Pasar Sayuran Hidroponik: Meningkatnya Minat Konsumen terhadap Produk Sehat'],
+                    ['tanggal' => '13 Maret 2025', 'judul' => 'Permintaan Kopi Organik Meningkat: Peluang bagi Petani untuk Beralih ke Pertanian Berkelanjutan'],
+                    ['tanggal' => '10 Maret 2025', 'judul' => 'Sosialisasi Metode Fermentasi Kopi untuk Meningkatkan Kualitas Biji Kopi Petani'],
+                    ['tanggal' => '07 Maret 2025', 'judul' => 'Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi Berkualitas Tinggi'],
                 ];
             @endphp
 
