@@ -49,6 +49,12 @@ Route::get('/admin/a_akun_terdaftar',function(){
     return view ('admin.a_akun_terdaftar');
 });
 
+// Akun Terdaftar
+Route::get('/admin/a_akun_terdaftar', [App\Http\Controllers\AccountController::class, 'index']);
+Route::post('/admin/store-admin', [App\Http\Controllers\AccountController::class, 'storeAdmin'])->name('admin.store');
+Route::delete('/admin/delete-user/{id}', [App\Http\Controllers\AccountController::class, 'deleteUser'])->name('user.delete');
+Route::delete('/admin/delete-admin/{id}', [App\Http\Controllers\AccountController::class, 'deleteAdmin'])->name('admin.delete');
+
 Route::get('/pengajuan_subsidi', [SubsidiController::class, 'index']);
 Route::post('/store', [SubsidiController::class, 'store'])->name('pengajuan_subsidi.store');
 

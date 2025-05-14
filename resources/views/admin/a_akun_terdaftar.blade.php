@@ -59,11 +59,22 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                       </svg>
                     </button>
-                    <button class="text-red-600 hover:text-red-800 delete-btn">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                      </svg>
-                    </button>
+                    <div class="flex justify-center space-x-2">
+                        <button class="text-blue-600 hover:text-blue-800">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                          </svg>
+                        </button>
+                        <form action="{{ route('admin.delete', $admin->id) }}" method="POST" class="inline">
+                          @csrf
+                          @method('DELETE')
+                          <button type="submit" class="text-red-600 hover:text-red-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                          </button>
+                        </form>
+                      </div>
                   </div>
                 </td>
               </tr>
@@ -288,7 +299,8 @@
         <!-- Add Admin Form -->
         <div id="add-admin-form" class="hidden mt-4 bg-[#E8F0D5] border border-gray-300 rounded-lg p-6">
           <h3 class="text-lg font-semibold bg-[#294B29] text-white py-2 px-4 rounded-t-lg -mt-6 -mx-6 mb-4">Tambah Akun Dinas</h3>
-          <form id="admin-form" class="space-y-4">
+          <form id="admin-form" action="{{ route('admin.store') }}" method="POST" class="space-y-4">
+            @csrf
             <div class="grid grid-cols-[100px_1fr] items-center">
               <label for="nama" class="text-sm font-medium">Nama</label>
               <input type="text" id="nama" name="nama" placeholder="Masukkan nama" class="w-full p-2 border border-gray-300 rounded bg-[#CBDAA9] focus:outline-none focus:ring-2 focus:ring-[#294B29]">
