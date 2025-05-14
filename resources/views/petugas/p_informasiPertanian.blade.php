@@ -67,7 +67,7 @@
         </div>
 
         {{-- Kotak Artikel --}}
-        <div class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-3 shadow">
+        <div class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-3 shadow px-10">
             @php
                 $articles = [
                     ['tanggal' => '23 Maret 2025', 'judul' => 'Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi Berkualitas Tinggi'],
@@ -88,15 +88,14 @@
                         <p class="font-semibold text-[#1B3219]">{{ $article['judul'] }}</p>
                     </div>
                     <div class="flex items-center space-x-3">
-                        <button class="text-[#1B3219] hover:text-green-700" title="Edit">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a1 1 0 001 1h11a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
-                            </svg>
+                        <!-- Tombol Edit -->
+                        <button title="Edit">
+                            <img src="{{ asset('icon/edit.png') }}" alt="Edit" class="w-5 h-5">
                         </button>
-                        <button class="text-red-600 hover:text-red-800" title="Hapus">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5-4h4a1 1 0 011 1v1H9V4a1 1 0 011-1z" />
-                            </svg>
+
+                        <!-- Tombol Hapus -->
+                        <button title="Hapus">
+                            <img src="{{ asset('icon/hapus.png') }}" alt="Hapus" class="w-5 h-5">
                         </button>
                     </div>
                 </div>
