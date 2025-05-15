@@ -37,11 +37,11 @@
                 <!-- Tombol Simpan di luar form -->
                 <div class="flex justify-end space-x-4 mt-80">
                     <a href="{{ url('petugas/p_update-harga') }}" 
-                        class="bg-gray-500 text-white px-6 py-2 rounded shadow hover:bg-gray-600">
+                        class="bg-[#1C3D1C] text-white px-6 py-2 rounded shadow hover:bg-[#2F5B2F]">
                         Kembali
                     </a>
                     <button type="submit" form="formHarga"
-                        class="bg-[#1C3D1C] text-white px-6 py-2 rounded shadow hover:bg-[#163216]">
+                        class="bg-[#1C3D1C] text-white px-6 py-2 rounded shadow hover:bg-[#2F5B2F]">
                         Simpan
                     </button>
                 </div>
