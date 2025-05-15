@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengajuan Subsidi</title>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -19,10 +20,10 @@
             @csrf
 
             <!-- NAMA -->
-            <div class="grid grid-cols-4 gap-4 items-center">
-                <label for="nama" class="pl-36 font-bold text-green-900 col-span-1">Nama</label>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 items-center">
+                <label for="nama" class="sm:pl-36 font-bold text-green-900 col-span-1">Nama</label>
                 <input type="text" id="nama" name="nama" placeholder="Nama Anda" required
-                    class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
+                    class="w-full sm:col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
                     value="{{ old('nama') }}">
                 @error('nama')
                     <p class="text-red-500 text-sm col-span-4">{{ $message }}</p>
@@ -30,10 +31,10 @@
             </div>
 
             <!-- ALAMAT -->
-            <div class="grid grid-cols-4 gap-4 items-center">
-                <label for="alamat" class="pl-36 font-bold text-green-900 col-span-1">Alamat</label>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 items-center">
+                <label for="alamat" class="sm:pl-36 font-bold text-green-900 col-span-1">Alamat</label>
                 <input type="text" id="alamat" name="alamat" placeholder="Alamat Anda" required
-                    class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
+                    class="w-full sm:col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
                     value="{{ old('alamat') }}">
                 @error('alamat')
                     <p class="text-red-500 text-sm col-span-4">{{ $message }}</p>
@@ -41,18 +42,18 @@
             </div>
 
             <!-- NIK -->
-            <div class="grid grid-cols-4 gap-4 items-center">
-                <label for="nik" class="pl-36 font-bold text-green-900 col-span-1">NIK</label>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 items-center">
+                <label for="nik" class="sm:pl-36 font-bold text-green-900 col-span-1">NIK</label>
                 <input type="text" id="nik" name="nik" placeholder="Nomor Induk Kependudukan" required
-                    class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
+                    class="w-full sm:col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none"
                     value="{{ old('nik') }}">
                 @error('nik')
                     <p class="text-red-500 text-center text-sm col-span-4">{{ $message }}</p>
                 @enderror
             </div>
 
-            <div class="grid grid-cols-4 gap-4 items-center">
-                <label for="jenis_subsidi" class="pl-36 font-bold text-green-900 col-span-1">Jenis Subsidi</label>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 items-center">
+                <label for="jenis_subsidi" class="sm:pl-36 font-bold text-green-900 col-span-1">Jenis Subsidi</label>
                 <div class="col-span-3 relative">
                     <select id="jenis_subsidi" name="jenis_subsidi"
                         class="w-full p-3 rounded bg-[#294B29] opacity-50 text-white appearance-none focus:outline-none">
@@ -71,8 +72,8 @@
             </div>
             <div id="pupuk_fields" class="space-y-4 hidden">
                 <!-- Jenis Pupuk -->
-                <div class="grid grid-cols-4 gap-4 items-center">
-                    <label for="jenis_pupuk" class="pl-36 font-bold text-green-900 col-span-1">Jenis Pupuk</label>
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 items-center">
+                    <label for="jenis_pupuk" class="sm:pl-36 font-bold text-green-900 col-span-1">Jenis Pupuk</label>
                     <div class="col-span-3 relative">
                         <select id="jenis_pupuk" name="jenis_pupuk"
                             class="w-full p-3 rounded bg-[#294B29] opacity-50 text-white appearance-none focus:outline-none">
@@ -84,25 +85,24 @@
                         <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </div>
                     </div>
                 </div>
-            
+
                 <!-- Volume Pupuk -->
-                <div class="grid grid-cols-4 gap-4 items-center">
-                    <label for="volume_pupuk" class="pl-36 font-bold text-green-900 col-span-1">Volume Pupuk</label>
-                    <input type="number" id="volume_pupuk" name="volume_pupuk"
-                        placeholder="Masukkan volume (kg/liter)"
-                        class="col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none">
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 items-center">
+                    <label for="volume_pupuk" class="sm:pl-36 font-bold text-green-900 col-span-1">Volume Pupuk</label>
+                    <input type="number" id="volume_pupuk" name="volume_pupuk" placeholder="Masukkan volume (kg/liter)"
+                        class="w-full sm:col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none">
                 </div>
             </div>
-            
+
             <!-- Tombol Kirim -->
             <div class="flex justify-end pt-4">
-                <button type="submit"
-                    class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 transition">
+                <button type="submit" class="bg-green-900 text-white px-6 py-2 rounded hover:bg-green-800 transition">
                     KIRIM
                 </button>
             </div>
@@ -112,7 +112,7 @@
     @include('components.footer')
     <script>
         // Tampilkan input tambahan saat pilih "pupuk"
-        document.getElementById('jenis_subsidi').addEventListener('change', function () {
+        document.getElementById('jenis_subsidi').addEventListener('change', function() {
             const pupukFields = document.getElementById('pupuk_fields');
             if (this.value === 'pupuk') {
                 pupukFields.classList.remove('hidden');
@@ -120,43 +120,43 @@
                 pupukFields.classList.add('hidden');
             }
         });
-    
+
         // Saat form dikirim (biarkan dikirim ke Laravel)
-        document.querySelector('form').addEventListener('submit', function () {
+        document.querySelector('form').addEventListener('submit', function() {
             const submitButton = this.querySelector('button[type="submit"]');
             submitButton.disabled = true;
             submitButton.innerText = "Mengirim...";
         });
-    
+
         // Tampilkan SweetAlert jika ada session success dari backend Laravel
         @if (session('success'))
             Swal.fire({
                 title: 'Pengajuan Berhasil!',
-                text: '{{ session("success") }}',
+                text: '{{ session('success') }}',
                 icon: 'success',
                 confirmButtonText: 'OK',
-                draggable:true
+                draggable: true
 
             });
         @endif
-    
+
         // Toggle notifikasi
-        document.getElementById('notificationBtn')?.addEventListener('click', function (e) {
+        document.getElementById('notificationBtn')?.addEventListener('click', function(e) {
             e.stopPropagation();
             const dropdown = document.getElementById('notificationDropdown');
             dropdown.classList.toggle('hidden');
         });
-    
-        document.getElementById('notificationDropdown')?.addEventListener('click', function (e) {
+
+        document.getElementById('notificationDropdown')?.addEventListener('click', function(e) {
             e.stopPropagation();
         });
-    
-        window.addEventListener('click', function () {
+
+        window.addEventListener('click', function() {
             const dropdown = document.getElementById('notificationDropdown');
             dropdown?.classList.add('hidden');
         });
     </script>
-        
+
 </body>
 
 </html>

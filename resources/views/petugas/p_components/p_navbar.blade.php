@@ -11,6 +11,8 @@
           SUBSIDI
       @elseif (Request::is('petugas/p_update-harga'))
           UPDATE HARGA
+      @elseif (Request::is('petugas/p_tambah-harga'))
+          TAMBAH HARGA
       @elseif (Request::is('petugas/p_informasi-pertanian'))
           INFORMASI PERTANIAN
       @elseif (Request::is('petugas/p_pengaturan'))

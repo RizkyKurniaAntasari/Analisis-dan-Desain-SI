@@ -23,7 +23,7 @@
             class="rounded-md hover:scale-105 transition w-full h-full object-cover" />
 
         <div class="relative rounded-md overflow-hidden hover:scale-105 transition">
-            <img src="{{ asset('icon/beranda_kopi.png') }}" alt="" class="w-full h-full object-cover">
+            <a href="{{ route('artikel.show', ['id' => 1]) }}"><img src="{{ asset('icon/beranda_kopi.png') }}" alt="" class="w-full h-full object-cover"></a>
             <div class="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-4">
                 <h2 class="text-lg font-bold">Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi Berkualitas
                     Tinggi</h2>
@@ -76,7 +76,7 @@
             </div>
 
             <button class="bg-[#39731B] text-white px-4 py-2 rounded-full text-sm mt-4 hover:bg-[#14491F] transition">
-                Lihat semua statistik
+                <a href="{{ route('statistik') }}">Lihat semua statistik</a>
             </button>
         </div>
     </section>
@@ -178,7 +178,7 @@
         <div class="mt-8 flex justify-left">
             <button
                 class="bg-[#39731B] px-6 py-3 rounded-full text-sm font-semibold hover:bg-[#14491F] transition text-[#DBE7C9]">
-                Lihat semua artikel
+                <a href="{{ route('users.artikel') }}">Lihat semua artikel</a>
             </button>
         </div>
     </section>

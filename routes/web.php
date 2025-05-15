@@ -5,16 +5,15 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\SubsidiController;
 use App\Http\Controllers\DataPengaduanController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ArtikelController;
 use App\Models\DataArtikel;
 use App\Models\Subsidi;
 use App\Models\DataPengaduan;
-use App\Http\Controllers\AccountController;
 
 Route::get('/', function(){
     return view('dashboard'); // sebelumnya welcome
 });
 
-// Petgas
 Route::get('/petugas/p_login', function(){
     return view ('petugas.p_login');
 });
@@ -41,26 +40,7 @@ Route::get('/petugas/p_pengaturan', function(){
     return view ('petugas.p_pengaturan');
 });
 
-// Admin
-Route::get('/admin',function(){
-    return view ('admin.a_index');
-});
-
-Route::get('/admin/a_akun_terdaftar',function(){
-    return view ('admin.a_akun_terdaftar');
-});
-
-Route::get('/admin/a_data_pertanian',function(){
-    return view ('admin.a_data_pertanian');
-});
-
-// Akun Terdaftar
-Route::get('/admin/a_akun_terdaftar', [App\Http\Controllers\AccountController::class, 'index']);
-Route::post('/admin/store-admin', [App\Http\Controllers\AccountController::class, 'storeAdmin'])->name('admin.store');
-Route::delete('/admin/delete-user/{id}', [App\Http\Controllers\AccountController::class, 'deleteUser'])->name('user.delete');
-Route::delete('/admin/delete-admin/{id}', [App\Http\Controllers\AccountController::class, 'deleteAdmin'])->name('admin.delete');
-
-Route::get('/pengajuan_subsidi', [SubsidiController::class, 'index']);
+Route::get('/pengajuan_subsidi', [SubsidiController::class, 'index'])->name('pengajuan_subsidi');
 Route::post('/store', [SubsidiController::class, 'store'])->name('pengajuan_subsidi.store');
 
 Route::get('login', [AuthController::class, 'index'])->name('login');
@@ -69,13 +49,14 @@ Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.pos
 Route::get('registration', [AuthController::class, 'registration'])->name('register');
 Route::post('post-registration', [AuthController::class, 'postRegistration'])->name('register.post'); 
 
-Route::get('dashboard', [AuthController::class, 'dashboard']); 
+Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard'); 
 Route::get('logout', [AuthController::class, 'logout'])->name('logout');
 
+Route::get( '/users/pengumuman',[UsersController::class, 'pengumuman'])->name('users.pengumuman');
+Route::get('/users/penyuluhan',[UsersController::class,'penyuluhan'])->name('users.penyuluhan');
+
 Route::get('profile', [AuthController::class, 'profile'])->name('profile');
-Route::get('pengumuman', [AuthController::class, 'pengumuman'])->name('pengumuman');
 Route::get('statistik', [AuthController::class, 'statistik'])->name('statistik');
-Route::get('penyuluhan', [AuthController::class, 'penyuluhan'])->name('penyuluhan');
 
 //Route::get('pengaduan', [AuthController::class, 'pengaduan'])->name('pengaduan');
 
@@ -84,4 +65,23 @@ Route::get('/pengaduan', [DataPengaduanController::class, 'pengaduan'])->name('p
 Route::post('/simpan',[DataPengaduanController::class, 'simpan'])->name('simpan.pengaduan');
 
 // Route Arttikel
-Route::get('/users/artikel',[UsersController::class, 'artikel'])->name("artikel");
+Route::get('/users/artikel',[UsersController::class, 'artikel'])->name("users.artikel");
+
+// Route::get('users/temp_artikel', function(){
+//     return view('users.temp_artikel');
+// });
+
+Route::get('/artikel/{id}', [ArtikelController::class, 'show'])->name('artikel.show');
+
+// ADMIN ADMIN ADMIN
+Route::get('admin/a_create_artikel', [ArtikelController::class, 'create'])->name('artikel.create');
+Route::post('admin/a_create_artikel', [ArtikelController::class, 'store'])->name('artikel.store');
+
+
+Route::get('/petugas/p_update-harga', function(){
+    return view('petugas.p_update-harga'); // sebelumnya welcome
+});
+
+Route::get('/petugas/p_tambah-harga', function(){
+    return view('petugas.p_tambah-harga'); // sebelumnya welcome
+})->name("tambah-harga");

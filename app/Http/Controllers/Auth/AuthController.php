@@ -99,20 +99,10 @@ class AuthController extends Controller
     {
             return view('profile');   
     }
-    // <=============================== [ P E N G U M U M A N] ===============================>
-    public function pengumuman()
-    {
-            return view('pengumuman');   
-    }
     // <=============================== [ S T A T I S T I K] ===============================>
     public function statistik()
     {
             return view('statistik');
         
-    }
-    // <=============================== [ P E N Y U L U H A N] ===============================>
-    public function penyuluhan()
-    {
-            return view('penyuluhan');
     }
 }
