@@ -99,7 +99,7 @@
                                 <tr>
                                     <th class="px-6 py-3">Hari</th>
                                     <th class="px-6 py-3">Tanggal</th>
-                                    <th class="px-6 py-3">Harga (Kg)</th>
+                                    <th class="px-6 py-3">Harga (per Kg)</th>
                                     <th class="px-6 py-3"></th>
                                 </tr>
                             </thead>
