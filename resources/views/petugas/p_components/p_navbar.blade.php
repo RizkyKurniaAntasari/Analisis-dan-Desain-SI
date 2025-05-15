@@ -1,5 +1,5 @@
 <!-- navbar.blade.php -->
-<div class="flex justify-between items-center">
+<div class="flex justify-between items-center mb-12">
   <h2 class="text-3xl font-bold">
       @if (Request::is('petugas/p_dashboard'))
           BERANDA

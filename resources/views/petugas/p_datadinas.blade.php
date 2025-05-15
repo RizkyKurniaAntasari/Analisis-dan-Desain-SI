@@ -3,31 +3,65 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Dinas</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-[#CBDAA9] font-poppins flex min-h-screen">
+<body class="flex bg-[#CBDAA9] font-poppins min-h-screen">
 
     {{-- Sidebar --}}
     @include('petugas.p_components.p_sidebar')
 
     {{-- Konten Utama --}}
-    <main class="flex-1 p-6 space-y-6 px-10">
+    <main class="p-6 bg-[#CBDAA9] flex-1">
         {{-- Navbar --}}
-        @include('petugas.p_components.p_navbar')
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-3xl font-bold">
+                @if (Request::is('petugas/p_dashboard'))
+                    BERANDA
+                @elseif (Request::is('petugas/p_datadinas'))
+                    DATA DINAS
+                @elseif (Request::is('petugas/p_pengaduan'))
+                    PENGADUAN
+                @elseif (Request::is('petugas/p_subsidi'))
+                    SUBSIDI
+                @elseif (Request::is('petugas/p_update-harga'))
+                    UPDATE HARGA
+                @elseif (Request::is('petugas/p_informasiPertanian'))
+                    INFORMASI PERTANIAN
+                @elseif (Request::is('petugas/p_pengaturan'))
+                    PENGATURAN
+                @else
+                    SIMAPAN
+                @endif
+            </h2>
 
+            <div class="flex items-center space-x-6">
+                {{-- Profil --}}
+                <div class="flex items-center space-x-2">
+                    <img src="https://i.pravatar.cc/40" alt="user" class="rounded-full w-10 h-10">
+                    <div>
+                        <p class="text-sm font-bold">Nadya Arsa</p>
+                        <p class="text-xs text-gray-600">Petugas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <br>
+
         <!-- Tabs -->
-        <div class="flex space-x-4 border-b mb-4 text-lg">
-            <button onclick="showTab('sejarah')" class="tab active-tab">Sejarah</button>
-            <button onclick="showTab('visi')" class="tab">Visi dan Misi</button>
-            <button onclick="showTab('tugas')" class="tab">Tugas dan Fungsi</button>
-            <button onclick="showTab('struktur')" class="tab">Struktur</button>
+        <div class="border-b-8 border-[#1B3219] my-0">
+            <nav class="flex space-x-4">
+                <button onclick="showTab('sejarah')" class="text-white bg-[#1B3219] px-4 py-2 rounded-t-lg font-bold" id="tab-sejarah">Sejarah</button>
+                <button onclick="showTab('visi')" class="text-[#1B3219] px-4 py-2 font-bold rounded-t-lg hover:underline" id="tab-visi">Visi dan Misi</button>
+                <button onclick="showTab('tugas')" class="text-[#1B3219] px-4 py-2 font-bold rounded-t-lg hover:underline" id="tab-tugas">Tugas dan Fungsi</button>
+                <button onclick="showTab('struktur')" class="text-[#1B3219] px-4 py-2 font-bold rounded-t-lg hover:underline" id="tab-struktur">Struktur</button>
+            </nav>
         </div>
 
         <!-- Isi Konten -->
-        <div id="tab-content" class="bg-white border p-4 rounded-md text-base leading-relaxed text-justify px-10">
+        <div id="tab-content" class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-3 shadow px-10">
             <p id="sejarah"></p>
         </div>
 
@@ -78,24 +112,31 @@
             `
         };
 
-        function showTab(tabKey) {
-            const content = document.getElementById('tab-content');
-            content.innerHTML = `<p>${tabContent[tabKey]}</p>`;
+        function showTab(tabName) {
+            // Hide all content
+            document.getElementById('tab-content').innerHTML = `<p>${tabContent[tabName]}</p>`;
 
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active-tab');
-            });
-            event.target.classList.add('active-tab');
+            // Reset all tab styles
+            document.getElementById('tab-sejarah').classList.remove('text-white', 'bg-[#1B3219]');
+            document.getElementById('tab-visi').classList.remove('text-white', 'bg-[#1B3219]');
+            document.getElementById('tab-tugas').classList.remove('text-white', 'bg-[#1B3219]');
+            document.getElementById('tab-struktur').classList.remove('text-white', 'bg-[#1B3219]');
+
+            // Add default text color to all tabs
+            document.getElementById('tab-sejarah').classList.add('text-[#1B3219]');
+            document.getElementById('tab-visi').classList.add('text-[#1B3219]');
+            document.getElementById('tab-tugas').classList.add('text-[#1B3219]');
+            document.getElementById('tab-struktur').classList.add('text-[#1B3219]');
+
+            // Style selected tab
+            document.getElementById('tab-' + tabName).classList.remove('text-[#1B3219]');
+            document.getElementById('tab-' + tabName).classList.add('text-white', 'bg-[#1B3219]');
         }
 
-        // Tambahkan style untuk tab
-        const style = document.createElement('style');
-        style.innerHTML = `
-      .tab { padding: 8px 16px; font-weight: 600; border-bottom: 2px solid transparent; }
-      .active-tab { border-color: #15803d; color: #15803d; }
-    `;
-        document.head.appendChild(style);
-        showTab('sejarah');
+        // Set default tab when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            showTab('sejarah');
+        });
     </script>
 
 </body>
