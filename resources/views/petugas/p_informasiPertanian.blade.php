@@ -65,7 +65,7 @@
         </div>
 
         {{-- Konten Artikel --}}
-        <div id="content-artikel" class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-3 shadow px-10">
+        <div id="content-artikel" class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-2 shadow px-10">
             @php
                 $articles = [
                     ['tanggal' => '23 Maret 2025', 'judul' => 'Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi Berkualitas Tinggi'],
@@ -76,6 +76,7 @@
                     ['tanggal' => '13 Maret 2025', 'judul' => 'Permintaan Kopi Organik Meningkat: Peluang bagi Petani untuk Beralih ke Pertanian Berkelanjutan'],
                     ['tanggal' => '10 Maret 2025', 'judul' => 'Sosialisasi Metode Fermentasi Kopi untuk Meningkatkan Kualitas Biji Kopi Petani'],
                     ['tanggal' => '07 Maret 2025', 'judul' => 'Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi Berkualitas Tinggi'],
+                    ['tanggal' => '05 Maret 2025', 'judul' => 'Pasar Sayuran Hidroponik: Meningkatnya Minat Konsumen terhadap Produk Sehat'],
                 ];
             @endphp
 
@@ -98,7 +99,7 @@
         </div>
 
         {{-- Konten Pengumuman --}}
-        <div id="content-pengumuman" class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-3 shadow px-10 hidden">
+        <div id="content-pengumuman" class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-2 shadow px-10 hidden">
             @php
                 $pengumuman = [
                     ['tanggal' => '23 Maret 2025', 'judul' => 'Pengumuman: Hasil Seleksi Berkas Pengajuan Subsidi Bantuan Pertanian'],
@@ -109,6 +110,7 @@
                     ['tanggal' => '17 Maret 2025', 'judul' => 'Pengumuman: Pendaftaran Pelatihan “Teknologi Smart Farming” Telah Dibuka!'],
                     ['tanggal' => '16 Maret 2025', 'judul' => 'Pengumuman: Pemeliharaan Sistem Simapan untuk Peningkatan Layanan dan Keamanan Data'],
                     ['tanggal' => '14 Maret 2025', 'judul' => 'Pengumuman: Update Data Harga Komoditas Kopi, Padi, dan Sayuran'],
+                    ['tanggal' => '12 Maret 2025', 'judul' => 'Pengumuman: Hasil Seleksi Berkas Pengajuan Subsidi Bantuan Pertanian'],
                 ];
             @endphp
 
@@ -132,7 +134,7 @@
         </div>
 
         {{-- Konten Penyuluhan --}}
-        <div id="content-penyuluhan" class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-3 shadow px-10 hidden">
+        <div id="content-penyuluhan" class="bg-white border border-[#1B3219] rounded-sm p-4 space-y-2 shadow px-10 hidden">
             @php
                 $penyuluhan = [
                     ['tanggal' => '23 Maret 2025', 'judul' => 'Cara Mengatasi Serangan Tungau pada Tanaman Tomat dan Paprika'],
@@ -143,6 +145,7 @@
                     ['tanggal' => '17 Maret 2025', 'judul' => 'Manajemen Penyakit Tanaman Kopi: Dari Pencegahan hingga Penanganan'],
                     ['tanggal' => '11 Maret 2025', 'judul' => 'Deteksi Dini Serangan Hama pada Tanaman Padi dan Solusinya'],
                     ['tanggal' => '09 Maret 2025', 'judul' => 'Strategi Meningkatkan Hasil Panen Sayuran dengan Teknik Organik'],
+                    ['tanggal' => '07 Maret 2025', 'judul' => 'Strategi Meningkatkan Hasil Panen Sayuran dengan Teknik Organik'],
                 ];
             @endphp
 
@@ -166,13 +169,16 @@
         </div>
 
         {{-- Tombol Tambah --}}
-        <div class="flex justify-end mt-6">
+        <div class="flex justify-end items-center mt-4 space-x-1">
+            <img src="{{ asset('icon/ikon_tambah.png') }}" class="w-12 h-12">
+        </div>
+        <!-- <div class="flex justify-end mt-6">
             <button class="bg-[#1B3219] text-white rounded-full p-3 shadow-lg hover:bg-green-800" title="Tambah Artikel">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                 </svg>
             </button>
-        </div>
+        </div> -->
     </main>
 
     <script>

@@ -80,3 +80,13 @@ Route::post('admin/a_create_artikel', [ArtikelController::class, 'store'])->name
 Route::get('/petugas/p_informasiPertanian', function(){
     return view ('petugas.p_informasiPertanian');
 });
+
+Route::get('/petugas/p_update-harga', function(){
+    return view ('petugas.p_update-harga');
+});
+
+Route::get('/petugas/tambah-harga', function(){
+    return view ('petugas.p_tambah-harga');
+})->name('tambah-harga');
+
+
