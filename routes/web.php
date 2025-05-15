@@ -8,6 +8,7 @@ use App\Http\Controllers\UsersController;
 use App\Models\DataArtikel;
 use App\Models\Subsidi;
 use App\Models\DataPengaduan;
+use App\Http\Controllers\AccountController;
 
 Route::get('/', function(){
     return view('dashboard'); // sebelumnya welcome
@@ -47,6 +48,10 @@ Route::get('/admin',function(){
 
 Route::get('/admin/a_akun_terdaftar',function(){
     return view ('admin.a_akun_terdaftar');
+});
+
+Route::get('/admin/a_data_pertanian',function(){
+    return view ('admin.a_data_pertanian');
 });
 
 // Akun Terdaftar

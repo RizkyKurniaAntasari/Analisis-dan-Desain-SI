@@ -22,7 +22,7 @@
          <span>AKUN TERDAFTAR</span>
      </a>
      
-     <a href="{{ url('petugas/p_subsidi') }}"
+     <a href="{{ url('admin/a_data_pertanian') }}"
         class="flex items-center px-4 py-3 rounded-l-full ml-3
                {{ Request::is('petugas/p_subsidi*') ? 'bg-[#CBDAA9] text-black font-bold' : 'hover:bg-[#417B3B] text-white' }}">
          <span class="mr-3">

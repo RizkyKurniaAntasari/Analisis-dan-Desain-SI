@@ -13,7 +13,7 @@ class AccountController extends Controller
     {
         $penggunas = Pengguna::all();
         $dinass = Dinas::all();
-        return view('dinas.a_akun_terdaftar', compact('penggunas', 'dinass'));
+        return view('/admin/a_akun_terdaftar', compact('penggunas', 'dinass'));
     }
 
     public function storeDinas(Request $request)

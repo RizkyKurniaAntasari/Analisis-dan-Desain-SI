@@ -5,8 +5,8 @@
           BERANDA
       @elseif (Request::is('admin/a_akun_terdaftar'))
           AKUN TERDAFTAR
-      @elseif (Request::is('petugas/p_pengaduan'))
-          PENGADUAN
+      @elseif (Request::is('admin/a_data_pertanian'))
+          DATA PERTANIAN
       @elseif (Request::is('petugas/p_subsidi'))
           SUBSIDI
       @elseif (Request::is('petugas/p_update-harga'))
