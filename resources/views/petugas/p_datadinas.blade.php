@@ -13,12 +13,13 @@
     @include('petugas.p_components.p_sidebar')
 
     {{-- Konten Utama --}}
-    <main class="flex-1 p-6 space-y-6">
+    <main class="flex-1 p-6 space-y-6 px-10">
         {{-- Navbar --}}
         @include('petugas.p_components.p_navbar')
 
+        <br>
         <!-- Tabs -->
-        <div class="flex space-x-4 border-b mb-4">
+        <div class="flex space-x-4 border-b mb-4 text-lg">
             <button onclick="showTab('sejarah')" class="tab active-tab">Sejarah</button>
             <button onclick="showTab('visi')" class="tab">Visi dan Misi</button>
             <button onclick="showTab('tugas')" class="tab">Tugas dan Fungsi</button>
@@ -26,11 +27,14 @@
         </div>
 
         <!-- Isi Konten -->
-        <div id="tab-content" class="bg-white border p-4 rounded-md text-sm leading-relaxed text-justify">
+        <div id="tab-content" class="bg-white border p-4 rounded-md text-base leading-relaxed text-justify px-10">
             <p id="sejarah"></p>
         </div>
 
-        <p class="text-xs text-right text-green-600 mt-4">🖊️ Edit</p>
+        <div class="flex justify-end items-center text-[#1B3219] mt-4 space-x-1 text-base">
+            <img src="{{ asset('icon/edit.png') }}" alt="Edit" class="w-5 h-5">
+            <span>Edit</span>
+        </div>
 
     </main>
 
@@ -40,7 +44,7 @@
             sejarah: `Sejarah Dinas Pertanian Kabupaten Lampung Barat berawal dari pembentukan Kabupaten Lampung Barat itu sendiri, yang diresmikan pada tanggal 24 September 1991, hasil pemekaran dari Kabupaten Lampung Utara. Sejak saat itu, Dinas Pertanian dibentuk sebagai bagian dari perangkat daerah untuk mengelola dan mengembangkan potensi pertanian yang menjadi tulang punggung perekonomian wilayah ini. <br><br>
                       Dalam perjalanannya, dinas ini mengalami berbagai penyesuaian struktur dan fungsi, menyesuaikan dengan dinamika kebijakan pemerintah dan kebutuhan masyarakat petani. Fokus awal dinas tertuju pada pengembangan tanaman pangan dan perkebunan, namun seiring waktu, peranannya meluas mencakup peningkatan kualitas sumber daya manusia petani, penerapan teknologi pertanian, dan pengelolaan sumber daya alam yang berkelanjutan. Program-program inovatif seperti Kartu Petani Berjaya (KPB) kemudian diimplementasikan, menandai upaya dinas dalam memodernisasi sektor pertanian dan meningkatkan kesejahteraan petani di Kabupaten Lampung Barat.`,
             visi: `<strong>VISI</strong><br>
-                  Terwujudnya sektor pertanian yang tangguh, berkelanjutan, dan berdaya saing, yang mendukung kesejahteraan petani dan ketahanan pangan di Kabupaten Lampung Barat.<br>
+                  Terwujudnya sektor pertanian yang tangguh, berkelanjutan, dan berdaya saing, yang mendukung kesejahteraan petani dan ketahanan pangan di Kabupaten Lampung Barat.<br><br>
 
                   <strong>MISI</strong><br>
                      <ul>
@@ -69,7 +73,8 @@
             `,
             struktur: `Dalam melaksanakan tugas dan kewajiban Dinas dipimpin oleh Kepala Dinas yang dalam pelaksanaan tugasnya dibantu oleh pejabat struktural dan pejabat fungsional sebagaimana terdapat dalam struktur organisasi di bawah ini:
                     <br>
-                    <img src="/img/struktur_organisasi.png" class="m-auto">
+                    <br>
+                    <img src="{{ asset('icon/struktur_organisasi.png') }}" class="w-2/3 h-auto mx-auto">
             `
         };
 
