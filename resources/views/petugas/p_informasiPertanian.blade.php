@@ -11,7 +11,7 @@
     {{-- Sidebar --}}
     @include('petugas.p_components.p_sidebar')
 
-    <main class="p-6 bg-[#CBDAA9] flex-1 space-y-6">
+    <main class="p-6 bg-[#CBDAA9] flex-1">
         {{-- Navbar --}}
         <div class="flex justify-between items-center">
         <h2 class="text-3xl font-bold">
@@ -58,7 +58,7 @@
 
 <br>
         {{-- Tab Navigasi --}}
-        <div class="border-b-8 border-[#1B3219] mb-0">
+        <div class="border-b-8 border-[#1B3219] mt-4">
             <nav class="flex space-x-4">
                 <button class="text-white bg-[#1B3219] px-4 py-2 rounded-t-lg font-semibold">Artikel</button>
                 <button class="text-[#1B3219] px-4 py-2 font-semibold hover:underline">Pengumuman</button>
