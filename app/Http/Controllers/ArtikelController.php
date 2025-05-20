@@ -59,7 +59,6 @@ class ArtikelController extends Controller
         return view('users.temp_artikel', compact('artikel'));
     }
 
-
     /**
      * Show the form for editing the specified resource.
      */
