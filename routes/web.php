@@ -77,18 +77,18 @@ Route::get('/users/artikel', [ArtikelController::class, 'index'])->name('users.a
 | PetugasController
 |--------------------------------------------------------------------------
 */
-Route::prefix('petugas')->group(function() {
+Route::prefix('petugas')->group(function () {
     // Auth Routes
     Route::get('p_login', [PetugasController::class, 'showLoginForm'])->name('petugas.p_login');
     Route::post('p_login', [PetugasController::class, 'login'])->name('petugas.login.submit');
     Route::post('logout', [PetugasController::class, 'logout'])->name('petugas.logout');
-    
+
     // Authenticated Routes
-    Route::middleware(['auth:petugas'])->group(function() {
+    Route::middleware(['auth:petugas'])->group(function () {
         Route::get('p_dashboard', [PetugasController::class, 'dashboard'])->name('petugas.p_dashboard');
         Route::get('p_pengaduan', [PetugasController::class, 'pengaduan'])->name('petugas.p_pengaduan');
         Route::get('p_subsidi', [PetugasController::class, 'subsidi'])->name('petugas.p_subsidi');
-        
+
         // Data Dinas
         Route::get('p_datadinas', [PetugasController::class, 'datadinas'])->name('petugas.datadinas');
         // Untuk mengambil/memuat konten sebuah tipe
