@@ -4,6 +4,7 @@ use App\Models\Petugas;
 use App\Models\DataPengaduan;
 use App\Models\KontenStaticPetugas;
 use App\Models\Subsidi;
+use App\Models\Artikel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -137,7 +138,8 @@ class PetugasController extends Controller
 
     public function informasiPertanian()
     {
-        return view('petugas.p_informasiPertanian');
+        $artikels = Artikel::latest()->get(); // Ambil semua artikel, terbaru duluan
+        return view('petugas.p_informasiPertanian', compact('artikels'));
     }
 
     public function updateHarga()
@@ -147,11 +149,11 @@ class PetugasController extends Controller
 
 /*
 |--------------------------------------------------------------------------
-| PETUGAS - DATA DINAS - TENTANG PROFILE  (Sejarah,Visi,Tugas,Struktur);
+| PETUGAS - P DATA DINAS - TENTANG PROFILE  (Sejarah,Visi,Tugas,Struktur);
 |--------------------------------------------------------------------------
 */
 
- public function menulis(Request $request)
+    public function menulis(Request $request)
     {
         $tipe = $request->tipe;
         $konten = KontenStaticPetugas::where('tipe', $tipe)->first();
