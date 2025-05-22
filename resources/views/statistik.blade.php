@@ -389,6 +389,24 @@
                         peningkatan permintaan atau penurunan pasokan di pasaran.</p>
                 </div>
             </div>
+
+            <div class="subcategory">
+                <i class="fas fa-chevron-down"></i>
+                <span>LADA</span>
+            </div>
+
+            <div class="content-area">
+                <div class="chart-container">
+                    <div class="chart-title">Statistik Harga Lada</div>
+                    <div class="chart-image">
+                        <canvas id="priceChartLada" width="100%" height="200"></canvas>
+                    </div>
+                </div>
+
+                <div class="text-content">
+                    <p>Statistik harga lada menunjukkan tren yang berbeda dibandingkan minggu lalu. Harga minggu ini cenderung lebih rendah dengan kisaran 89-98 ribu rupiah per kilogram, sementara minggu lalu mencapai level yang lebih tinggi yaitu 93-102 ribu rupiah. Puncak harga minggu ini terjadi pada hari Jumat di angka 98 ribu rupiah, sedangkan minggu lalu harga tertinggi mencapai 102 ribu rupiah pada hari Kamis dan Jumat. Penurunan harga ini menunjukkan adanya peningkatan pasokan atau penurunan permintaan di pasaran.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -530,6 +548,13 @@
                 [85.0, 86.0, 87.0, 88.0, 89.0, 88.0, 87.0],
                 [83.0, 84.0, 85.0, 86.0, 87.0, 86.0, 85.0],
                 82, 90, 2
+            );
+
+            const chartLada = createPriceChart(
+                'priceChartLada',
+                [93.0, 94.0, 100.0, 102.0, 102.0, 101.0, 102.0],
+                [90.0, 92.0, 92.0, 95.0, 98.0, 90.0, 89.0],
+                88, 104, 2
             );
         });
     </script>
