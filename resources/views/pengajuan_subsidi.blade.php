@@ -128,6 +128,7 @@
                 text: '{{ session('success') }}',
                 icon: 'success',
                 confirmButtonText: 'OK',
+                confirmButtonColor: '#294B29',
                 draggable: true
 
             });
