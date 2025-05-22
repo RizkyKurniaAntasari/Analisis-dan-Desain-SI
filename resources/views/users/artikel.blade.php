@@ -20,16 +20,15 @@
         <!-- FILTER -->
         <aside class="w-64 bg-[#294B29] text-white rounded-lg p-4 text-sm space-y-6">
             <div>
-            <div class="flex items-center gap-x-2 mb-2">
-                    <span><img src="{{ asset('icon/filter.png') }}" alt="Filter" class="w-5 h-5"></span> 
+                <div class="flex items-center gap-x-2 mb-2">
+                    <span><img src="{{ asset('icon/filter.png') }}" alt="Filter" class="w-5 h-5"></span>
                     <span class=" text-2xl font-bold">FILTER</span>
                 </div>
 
                 <!-- Jenis Artikel -->
                 <div>
-                    <button onclick="toggleContent('jenisArtikel')"
-                        class="flex items-center gap-x-2 w-full mb-2">
-                        <span class="icon">▼</span> 
+                    <button onclick="toggleContent('jenisArtikel')" class="flex items-center gap-x-2 w-full mb-2">
+                        <span class="icon">▼</span>
                         <span class="font-bold text-lg">JENIS ARTIKEL</span>
                     </button>
                     <div id="jenisArtikel" class="space-y-1 ml-2">
@@ -40,8 +39,7 @@
 
                 <!-- Waktu Publish -->
                 <div>
-                    <button onclick="toggleContent('waktuPublish')"
-                        class="flex items-center gap-x-2 w-full mt-4 mb-2">
+                    <button onclick="toggleContent('waktuPublish')" class="flex items-center gap-x-2 w-full mt-4 mb-2">
                         <span class="icon">▼</span>
                         <span class="font-bold text-lg">WAKTU PUBLISH</span>
                     </button>
@@ -57,82 +55,29 @@
         <!-- ARTIKEL -->
         <main class="flex-1 bg-[#DBE7C9] rounded-lg p-4 space-y-4">
 
-        <!-- Artikel 1 -->
-        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
-            <img src="{{ asset('img/artikel1.png') }}" class="rounded w-28 h-20 object-cover" />
-            <div>
-                <p class="text-xs text-gray-500">23 Maret 2025</p>
-                <p class="font-semibold text-sm text-gray-800">
-                    Tren Kopi Spesialti: Meningkatnya Minat Konsumen terhadap Kopi Berkualitas Tinggi
-                </p>
-            </div>
-        </div>
+            {{-- Menampilkan daftar semua artikel dari database --}}
+            @foreach ($artikels as $artikel)
+                <div class="flex space-x-4 border-b pb-3 mb-3">
+                    {{-- Gambar artikel --}}
+                    <img src="{{ asset('img_artikel/' . $artikel->gambar) }}" alt="Gambar Artikel {{ $artikel->judul }}"
+                        class="rounded w-20 h-20 object-cover" />
 
-        <!-- Artikel 2 -->
-        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
-            <img src="{{ asset('img/artikel2.png') }}" class="rounded w-28 h-20 object-cover" />
-            <div>
-                <p class="text-xs text-gray-500">20 Maret 2025</p>
-                <p class="font-semibold text-sm text-gray-800">
-                    Peran Artificial Intelligence (AI) dalam Memprediksi Hama dan Penyakit pada Tanaman Sayuran
-                </p>
-            </div>
-        </div>
+                    {{-- Informasi artikel --}}
+                    <div>
+                        {{-- Tanggal publikasi --}}
+                        <p class="text-xs text-gray-500">
+                            {{ \Carbon\Carbon::parse($artikel->created_at)->translatedFormat('d F Y') }}
+                        </p>
 
-        <!-- Artikel 3 -->
-        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
-            <img src="{{ asset('img/artikel3.png') }}" class="rounded w-28 h-20 object-cover" />
-            <div>
-                <p class="text-xs text-gray-500">19 Maret 2025</p>
-                <p class="font-semibold text-sm text-gray-800">
-                    Penerapan Teknologi Drone dalam Pertanian Padi: Solusi untuk Efisiensi dan Produktivitas
-                </p>
-            </div>
-        </div>
-
-        <!-- Artikel 4 -->
-        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
-            <img src="{{ asset('img/artikel4.png') }}" class="rounded w-28 h-20 object-cover" />
-            <div>
-                <p class="text-xs text-gray-500">17 Maret 2025</p>
-                <p class="font-semibold text-sm text-gray-800">
-                    Permintaan Kopi Organik Meningkat: Peluang bagi Petani untuk Beralih ke Pertanian Berkelanjutan
-                </p>
-            </div>
-        </div>
-
-        <!-- Artikel 5 -->
-        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
-            <img src="{{ asset('img/artikel5.png') }}" class="rounded w-28 h-20 object-cover" />
-            <div>
-                <p class="text-xs text-gray-500">17 Maret 2025</p>
-                <p class="font-semibold text-sm text-gray-800">
-                    Sistem Intensifikasi Padi (SRI): Solusi Hemat Air untuk Produksi Maksimal
-                </p>
-            </div>
-        </div>
-
-        <!-- Artikel 6 -->
-        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
-            <img src="{{ asset('img/artikel6.png') }}" class="rounded w-28 h-20 object-cover" />
-            <div>
-                <p class="text-xs text-gray-500">17 Maret 2025</p>
-                <p class="font-semibold text-sm text-gray-800">
-                    Pasar Sayuran Hidroponik: Meningkatnya Minat Konsumen terhadap Produk Sehat
-                </p>
-            </div>
-        </div>
-
-        <!-- Artikel 7 -->
-        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
-            <img src="{{ asset('img/artikel7.png') }}" class="rounded w-28 h-20 object-cover" />
-            <div>
-                <p class="text-xs text-gray-500">17 Maret 2025</p>
-                <p class="font-semibold text-sm text-gray-800">
-                    Pupuk Organik dari Limbah Dapur: Cara Sederhana Mendukung Pertanian Berkelanjutan
-                </p>
-            </div>
-        </div>
+                        {{-- Judul artikel --}}
+                        <p class="font-semibold text-sm text-[#294B29]">
+                            <a href="{{ route('artikel.show', ['id' => $artikel->id]) }}">
+                                {{ $artikel->judul }}
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            @endforeach
 
         </main>
 
