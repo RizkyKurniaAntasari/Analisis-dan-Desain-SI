@@ -20,27 +20,32 @@
         <!-- FILTER -->
         <aside class="w-64 bg-[#294B29] text-white rounded-lg p-4 text-sm space-y-6">
             <div>
-                <p class="font-semibold mb-2">FILTER</p>
+                <div class="flex items-center gap-x-2 mb-2">
+                    <span><img src="{{ asset('icon/filter.png') }}" alt="Filter" class="w-5 h-5"></span> 
+                    <span class=" text-2xl font-bold">FILTER</span>
+                </div>
 
                 <!-- Jenis Artikel -->
                 <div>
                     <button onclick="toggleContent('jenisArtikel')"
-                        class="flex items-center justify-between w-full mb-2">
-                        <span>JENIS ARTIKEL</span>
-                        <span class="icon">▼</span>
+                        class="flex items-center gap-x-2 w-full mb-2">
+                        <span class="icon">▼</span> 
+                        <span class="font-bold text-lg">JENIS PENGUMUMAN</span>
                     </button>
                     <div id="jenisArtikel" class="space-y-1 ml-2">
-                        <label class="block"><input type="checkbox" class="mr-2">Perkebunan</label>
-                        <label class="block"><input type="checkbox" class="mr-2">Pertanian</label>
+                        <label class="block"><input type="checkbox" class="mr-2">Subsidi</label>
+                        <label class="block"><input type="checkbox" class="mr-2">Pembaruan</label>
+                        <label class="block"><input type="checkbox" class="mr-2">Cuaca</label>
+                        <label class="block"><input type="checkbox" class="mr-2">Lainnya</label>
                     </div>
                 </div>
 
                 <!-- Waktu Publish -->
                 <div>
                     <button onclick="toggleContent('waktuPublish')"
-                        class="flex items-center justify-between w-full mt-4 mb-2">
-                        <span>WAKTU PUBLISH</span>
+                        class="flex items-center gap-x-2 w-full mt-4 mb-2">
                         <span class="icon">▼</span>
+                        <span class="font-bold text-lg">WAKTU PUBLISH</span>
                     </button>
                     <div id="waktuPublish" class="space-y-1 ml-2">
                         <label class="block"><input type="checkbox" class="mr-2">1 minggu terakhir</label>
@@ -56,7 +61,7 @@
 
             <!-- Artikel 1 -->
             <div class="flex space-x-4 border-b pb-3">
-                <img src="https://source.unsplash.com/80x80/?coffee" class="rounded w-20 h-20 object-cover" />
+                <img src="{{ asset('img/pengumuman1.png') }}" class="rounded w-28 h-20 object-cover" />
                 <div>
                     <p class="text-xs text-gray-500">23 Maret 2025</p>
                     <p class="font-semibold text-sm text-gray-800">
@@ -74,7 +79,7 @@
 
             <!-- Artikel 2 -->
             <div class="flex space-x-4 border-b pb-3">
-                <img src="https://source.unsplash.com/80x80/?vegetable" class="rounded w-20 h-20 object-cover" />
+                <img src="{{ asset('img/pengumuman2.png') }}" class="rounded w-28 h-20 object-cover" />
                 <div>
                     <p class="text-xs text-gray-500">20 Maret 2025</p>
                     <p class="font-semibold text-sm text-gray-800">
@@ -85,7 +90,7 @@
 
             <!-- Artikel 3 -->
             <div class="flex space-x-4 border-b pb-3">
-                <img src="https://source.unsplash.com/80x80/?drone" class="rounded w-20 h-20 object-cover" />
+                <img src="{{ asset('img/pengumuman3.png') }}" class="rounded w-28 h-20 object-cover" />
                 <div>
                     <p class="text-xs text-gray-500">19 Maret 2025</p>
                     <p class="font-semibold text-sm text-gray-800">
@@ -96,7 +101,7 @@
 
             <!-- Artikel 4 -->
             <div class="flex space-x-4 border-b pb-3">
-                <img src="https://source.unsplash.com/80x80/?agriculture" class="rounded w-20 h-20 object-cover" />
+                <img src="{{ asset('img/pengumuman4.png') }}" class="rounded w-28 h-20 object-cover" />
                 <div>
                     <p class="text-xs text-gray-500">17 Maret 2025</p>
                     <p class="font-semibold text-sm text-gray-800">
@@ -107,7 +112,7 @@
 
             <!-- Artikel 5 -->
             <div class="flex space-x-4 border-b pb-3">
-                <img src="https://source.unsplash.com/80x80/?soil" class="rounded w-20 h-20 object-cover" />
+                <img src="{{ asset('img/pengumuman5.png') }}" class="rounded w-28 h-20 object-cover" />
                 <div>
                     <p class="text-xs text-gray-500">15 Maret 2025</p>
                     <p class="font-semibold text-sm text-gray-800">
@@ -118,7 +123,7 @@
 
             <!-- Artikel 6 -->
             <div class="flex space-x-4 border-b pb-3">
-                <img src="https://source.unsplash.com/80x80/?farmer" class="rounded w-20 h-20 object-cover" />
+                <img src="{{ asset('img/pengumuman6.png') }}" class="rounded w-28 h-20 object-cover" />
                 <div>
                     <p class="text-xs text-gray-500">13 Maret 2025</p>
                     <p class="font-semibold text-sm text-gray-800">
@@ -129,7 +134,7 @@
 
             <!-- Artikel 7 -->
             {{-- <div class="flex space-x-4 border-b pb-3">
-                <img src="https://source.unsplash.com/80x80/?plant" class="rounded w-20 h-20 object-cover" />
+                <img src="{{ asset('img/pengumuman7.png') }}" class="rounded w-28 h-20 object-cover" />
                 <div>
                     <p class="text-xs text-gray-500">10 Maret 2025</p>
                     <p class="font-semibold text-sm text-gray-800">
