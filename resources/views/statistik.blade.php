@@ -230,7 +230,7 @@
 
             <div class="subcategory">
                 <i class="fas fa-chevron-down"></i>
-                <span>PADI/BERAS</span>
+                <span class="font-bold">PADI/BERAS</span>
             </div>
 
             <div class="content-area">
@@ -256,7 +256,7 @@
 
             <div class="subcategory">
                 <i class="fas fa-chevron-down"></i>
-                <span>CABAI RAWIT</span>
+                <span class="font-bold">CABAI RAWIT</span>
             </div>
 
             <div class="content-area">
@@ -279,7 +279,7 @@
 
             <div class="subcategory">
                 <i class="fas fa-chevron-down"></i>
-                <span>WORTEL</span>
+                <span class="font-bold">WORTEL</span>
             </div>
 
             <div class="content-area">
@@ -300,7 +300,7 @@
 
             <div class="subcategory">
                 <i class="fas fa-chevron-down"></i>
-                <span>TOMAT</span>
+                <span class="font-bold">TOMAT</span>
             </div>
 
             <div class="content-area">
@@ -321,7 +321,7 @@
 
             <div class="subcategory">
                 <i class="fas fa-chevron-down"></i>
-                <span>BUNCIS</span>
+                <span class="font-bold">BUNCIS</span>
             </div>
 
             <div class="content-area">
@@ -342,7 +342,7 @@
 
             <div class="subcategory">
                 <i class="fas fa-chevron-down"></i>
-                <span>KUBIS</span>
+                <span class="font-bold">KUBIS</span>
             </div>
 
             <div class="content-area">
@@ -371,7 +371,7 @@
 
             <div class="subcategory">
                 <i class="fas fa-chevron-down"></i>
-                <span>KOPI</span>
+                <span class="font-bold">KOPI</span>
             </div>
 
             <div class="content-area">
@@ -392,7 +392,7 @@
 
             <div class="subcategory">
                 <i class="fas fa-chevron-down"></i>
-                <span>LADA</span>
+                <span class="font-bold">LADA</span>
             </div>
 
             <div class="content-area">

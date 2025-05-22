@@ -58,7 +58,7 @@
         <main class="flex-1 bg-[#DBE7C9] rounded-lg p-4 space-y-4">
 
         <!-- Artikel 1 -->
-        <div class="flex space-x-4 border-b pb-3">
+        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
             <img src="{{ asset('img/artikel1.png') }}" class="rounded w-28 h-20 object-cover" />
             <div>
                 <p class="text-xs text-gray-500">23 Maret 2025</p>
@@ -69,7 +69,7 @@
         </div>
 
         <!-- Artikel 2 -->
-        <div class="flex space-x-4 border-b pb-3">
+        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
             <img src="{{ asset('img/artikel2.png') }}" class="rounded w-28 h-20 object-cover" />
             <div>
                 <p class="text-xs text-gray-500">20 Maret 2025</p>
@@ -80,7 +80,7 @@
         </div>
 
         <!-- Artikel 3 -->
-        <div class="flex space-x-4 border-b pb-3">
+        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
             <img src="{{ asset('img/artikel3.png') }}" class="rounded w-28 h-20 object-cover" />
             <div>
                 <p class="text-xs text-gray-500">19 Maret 2025</p>
@@ -91,7 +91,7 @@
         </div>
 
         <!-- Artikel 4 -->
-        <div class="flex space-x-4 border-b pb-3">
+        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
             <img src="{{ asset('img/artikel4.png') }}" class="rounded w-28 h-20 object-cover" />
             <div>
                 <p class="text-xs text-gray-500">17 Maret 2025</p>
@@ -102,7 +102,7 @@
         </div>
 
         <!-- Artikel 5 -->
-        <div class="flex space-x-4 border-b pb-3">
+        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
             <img src="{{ asset('img/artikel5.png') }}" class="rounded w-28 h-20 object-cover" />
             <div>
                 <p class="text-xs text-gray-500">17 Maret 2025</p>
@@ -113,7 +113,7 @@
         </div>
 
         <!-- Artikel 6 -->
-        <div class="flex space-x-4 border-b pb-3">
+        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
             <img src="{{ asset('img/artikel6.png') }}" class="rounded w-28 h-20 object-cover" />
             <div>
                 <p class="text-xs text-gray-500">17 Maret 2025</p>
@@ -124,7 +124,7 @@
         </div>
 
         <!-- Artikel 7 -->
-        <div class="flex space-x-4 border-b pb-3">
+        <div class="flex space-x-4 border-b border-[#294B29] pb-3">
             <img src="{{ asset('img/artikel7.png') }}" class="rounded w-28 h-20 object-cover" />
             <div>
                 <p class="text-xs text-gray-500">17 Maret 2025</p>
