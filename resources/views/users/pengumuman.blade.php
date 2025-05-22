@@ -133,7 +133,7 @@
             </div>
 
             <!-- Artikel 7 -->
-            {{-- <div class="flex space-x-4 border-b pb-3">
+            <div class="flex space-x-4 border-b pb-3">
                 <img src="{{ asset('img/pengumuman7.png') }}" class="rounded w-28 h-20 object-cover" />
                 <div>
                     <p class="text-xs text-gray-500">10 Maret 2025</p>
@@ -141,7 +141,7 @@
                         Urban Farming di Lahan Sempit: Solusi Ketahanan Pangan Keluarga Perkotaan
                     </p>
                 </div>
-            </div> --}}
+            </div>
 
         </main>
     </div>
