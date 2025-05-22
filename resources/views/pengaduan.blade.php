@@ -14,36 +14,35 @@
     <div class=" bg-[#DBE7C9] p-10 rounded min-h-screen items-center justify-center">
         <h1 class="text-center text-2xl font-bold text-green-900 mb-8">PESAN PENGADUAN</h1>
 
-        <form action="{{ route('simpan.pengaduan') }}" method="POST" class="space-y-6" autocomplete="off">
+        <form action="{{ route('simpan.pengaduan') }}" method="POST" class="space-y-6 px-20" autocomplete="off">
             @csrf
 
             <!-- NAMA -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
-                <label for="nama" class="font-bold text-green-900 text-left md:text-left md:pl-36">Nama</label>
+            <div class="flex items-center mb-4">    
+                <label for="nama" class="font-bold text-green-900 w-32">Nama</label>
                 <input type="text" id="nama" name="nama" placeholder="Nama Anda"
-                    class="md:col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none w-full">
+                    class="flex-1 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none" />
             </div>
 
             <!-- ALAMAT -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
-                <label for="alamat" class="font-bold text-green-900 text-left md:text-left md:pl-36">Alamat</label>
+            <div class="flex items-center mb-4">
+                <label for="alamat" class="font-bold text-green-900 w-32">Alamat</label>
                 <input type="text" id="alamat" name="alamat" placeholder="Alamat Anda"
-                    class="md:col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none w-full">
+                    class="flex-1 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none" />
             </div>
 
             <!-- E-MAIL -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
-                <label for="email" class="font-bold text-green-900 text-left md:text-left md:pl-36">E-mail</label>
+            <div class="flex items-center mb-4">
+                <label for="email" class="font-bold text-green-900 w-32">E-mail</label>
                 <input type="text" id="email" name="email" placeholder="Alamat E-mail"
-                    class="md:col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none w-full">
+                    class="flex-1 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none" />
             </div>
 
             <!-- ISI PESAN -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 items-start">
-                <label for="isi_pesan" class="font-bold text-green-900 text-left md:text-left md:pl-36 pt-2">Isi
-                    Pesan</label>
+            <div class="flex items-start mb-4">
+                <label for="isi_pesan" class="font-bold text-green-900 w-32 pt-2">Isi Pesan</label>
                 <textarea id="isi_pesan" name="isi_pesan" rows="6" placeholder="Pesan"
-                    class="md:col-span-3 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none resize-none w-full"></textarea>
+                    class="flex-1 p-3 rounded bg-[#294B29] opacity-50 text-white placeholder-white focus:outline-none resize-none"></textarea>
             </div>
 
             <!-- TOMBOL KIRIM -->
